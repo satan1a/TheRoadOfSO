@@ -8,3 +8,4 @@ nav:
         - 'About':
                 - 'About': 'about/about.md'
                 - 'Release Notes': 'about/releaseNotes.md'
+        - 'TestCase': 'test.md'
