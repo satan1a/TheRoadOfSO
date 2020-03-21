@@ -5,6 +5,8 @@ theme:
 
 nav:
         - 'index.md'
+        - '对安全运营的理解': '0x0理解/对安全运营的理解.md'
+        
         - 'About':
                 - 'About': 'about/about.md'
-                - 'Release Notes': 'about/releaseNotes.md'
+                - 'Release Notes': 'about/releaseNotes.md'        
