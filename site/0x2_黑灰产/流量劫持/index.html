@@ -36,7 +36,7 @@
     
     
       
-        <title>威胁狩猎 - 安全运营之路</title>
+        <title>关于流量劫持问题 - 安全运营之路</title>
       
     
     
@@ -101,7 +101,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                威胁狩猎
+                关于流量劫持问题
               
             </span>
           
@@ -216,12 +216,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       0x1 威胁情报
@@ -232,6 +230,68 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x0_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/" title="威胁狩猎" class="md-nav__link">
+      威胁狩猎
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x1_%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E5%85%B1%E4%BA%AB/" title="如何实现威胁情报共享" class="md-nav__link">
+      如何实现威胁情报共享
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      0x2 黑灰产
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        0x2 黑灰产
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../%E5%AF%B9%E9%BB%91%E7%81%B0%E4%BA%A7%E7%9A%84%E7%A0%94%E7%A9%B6/" title="黑灰产研究" class="md-nav__link">
+      黑灰产研究
+    </a>
+  </li>
+
         
           
           
@@ -248,11 +308,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        威胁狩猎
+        关于流量劫持问题
       </label>
     
-    <a href="./" title="威胁狩猎" class="md-nav__link md-nav__link--active">
-      威胁狩猎
+    <a href="./" title="关于流量劫持问题" class="md-nav__link md-nav__link--active">
+      关于流量劫持问题
     </a>
     
       
@@ -266,16 +326,35 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    概念
+  <a href="#0" class="md-nav__link">
+    0. 本地劫持
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    前置知识
+    案例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-dns" class="md-nav__link">
+    1. DNS劫持
   </a>
   
     <nav class="md-nav">
@@ -283,19 +362,21 @@
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    网络安全滑动标尺模型
+    定义
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    攻击方法
+  </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cyber-threat-hunting" class="md-nav__link">
-    威胁狩猎（Cyber Threat Hunting）
+  <a href="#_6" class="md-nav__link">
+    防护手段
   </a>
   
 </li>
@@ -306,23 +387,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    过程和方式
+  <a href="#2-http" class="md-nav__link">
+    2. HTTP劫持
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    威胁狩猎的过程
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
-    威胁狩猎的方式（起点）
+    定义
   </a>
   
 </li>
@@ -333,43 +407,76 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 证书劫持
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 链路劫持
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    成熟度评价
+    定义
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#threat-hunders" class="md-nav__link">
-    Threat Hunders需要的技能
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
-    数据来源
+    判断方法
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
-    组织架构
+    案例
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 运营商劫持
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
-    
+    攻击方法
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    防护手段
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    具体步骤（管理角度）
+  <a href="#7-cdn" class="md-nav__link">
+    7. CDN缓存污染
   </a>
   
     <nav class="md-nav">
@@ -377,14 +484,26 @@
         
           <li class="md-nav__item">
   <a href="#_13" class="md-nav__link">
-    范围确认
+    定义
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_14" class="md-nav__link">
-    技术准备
+    案例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    8. 软件升级劫持
   </a>
   
     <nav class="md-nav">
@@ -392,27 +511,15 @@
         
           <li class="md-nav__item">
   <a href="#_15" class="md-nav__link">
-    数据收集
+    定义
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_16" class="md-nav__link">
-    产品技术选型
+    案例
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    威胁情报的使用
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -422,37 +529,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
-    
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
-    解决方案（产品与实例）
+  <a href="#addition" class="md-nav__link">
+    Addition
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#siem" class="md-nav__link">
-    SIEM类产品
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
-    终端类产品
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mdr" class="md-nav__link">
-    MDR类服务
+  <a href="#osi" class="md-nav__link">
+    OSI七层模型
   </a>
   
 </li>
@@ -477,66 +563,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../1x1_%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E5%85%B1%E4%BA%AB/" title="如何实现威胁情报共享" class="md-nav__link">
-      如何实现威胁情报共享
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
-      0x2 黑灰产
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        0x2 黑灰产
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7/%E5%AF%B9%E9%BB%91%E7%81%B0%E4%BA%A7%E7%9A%84%E7%A0%94%E7%A9%B6/" title="黑灰产研究" class="md-nav__link">
-      黑灰产研究
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7/%E6%B5%81%E9%87%8F%E5%8A%AB%E6%8C%81/" title="关于流量劫持问题" class="md-nav__link">
-      关于流量劫持问题
-    </a>
   </li>
 
         
@@ -770,16 +796,35 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    概念
+  <a href="#0" class="md-nav__link">
+    0. 本地劫持
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    前置知识
+    案例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-dns" class="md-nav__link">
+    1. DNS劫持
   </a>
   
     <nav class="md-nav">
@@ -787,19 +832,21 @@
         
           <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    网络安全滑动标尺模型
+    定义
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    攻击方法
+  </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cyber-threat-hunting" class="md-nav__link">
-    威胁狩猎（Cyber Threat Hunting）
+  <a href="#_6" class="md-nav__link">
+    防护手段
   </a>
   
 </li>
@@ -810,23 +857,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    过程和方式
+  <a href="#2-http" class="md-nav__link">
+    2. HTTP劫持
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    威胁狩猎的过程
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
-    威胁狩猎的方式（起点）
+    定义
   </a>
   
 </li>
@@ -837,43 +877,76 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 证书劫持
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 链路劫持
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    成熟度评价
+    定义
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#threat-hunders" class="md-nav__link">
-    Threat Hunders需要的技能
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
-    数据来源
+    判断方法
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
-    组织架构
+    案例
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 运营商劫持
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
-    
+    攻击方法
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    防护手段
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    具体步骤（管理角度）
+  <a href="#7-cdn" class="md-nav__link">
+    7. CDN缓存污染
   </a>
   
     <nav class="md-nav">
@@ -881,14 +954,26 @@
         
           <li class="md-nav__item">
   <a href="#_13" class="md-nav__link">
-    范围确认
+    定义
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_14" class="md-nav__link">
-    技术准备
+    案例
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    8. 软件升级劫持
   </a>
   
     <nav class="md-nav">
@@ -896,27 +981,15 @@
         
           <li class="md-nav__item">
   <a href="#_15" class="md-nav__link">
-    数据收集
+    定义
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_16" class="md-nav__link">
-    产品技术选型
+    案例
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    威胁情报的使用
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -926,37 +999,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
-    
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
-    解决方案（产品与实例）
+  <a href="#addition" class="md-nav__link">
+    Addition
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#siem" class="md-nav__link">
-    SIEM类产品
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_20" class="md-nav__link">
-    终端类产品
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mdr" class="md-nav__link">
-    MDR类服务
+  <a href="#osi" class="md-nav__link">
+    OSI七层模型
   </a>
   
 </li>
@@ -990,174 +1042,168 @@
               
                 
                 
-                <h1 id="_1">威胁狩猎</h1>
-<p>本篇主要是对“安全喷子”公众号中《威胁狩猎101文档》的学习笔记，作为个人的记录和分享。如有侵权，请告知。</p>
-<h2 id="_2">概念</h2>
-<h3 id="_3">前置知识</h3>
-<h4 id="_4">网络安全滑动标尺模型</h4>
-<p><img alt="" src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200321192937.png" />
-图：Sans网络安全滑动标尺模型</p>
-<p>目前，安全建设主要集中在架构安全与被动防御这两块，主动防御和威胁情报这块正在火热地建设中，而进攻（针对攻击者的合法反制措施和自我防御措施）、主动防御（以攻为守）这块则相对投入不足[2]。
-在这种情况下，网络威胁狩猎（Cyber Threat Hunting）的概念应运而生。</p>
-<blockquote></blockquote>
-<h3 id="cyber-threat-hunting">威胁狩猎（Cyber Threat Hunting）</h3>
-<blockquote>
-<p>威胁狩猎的定义：威胁狩猎是一个高级安全功能，集成了主动防御、创新技术、技术专家以及深度威胁情报来发现和阻止恶意的并且极难检测的攻击行为。同时，这些攻击行为也是传统自动化的防御无法检测出来的。[1]</p>
-</blockquote>
-<p><img alt="" src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200321193003.png" />
-图：威胁狩猎、SOC（安全运营中心）和事件响应之间的关系</p>
-<p>SOC和TH的主要区别在于，SOC主要是运营维护日常的安全设备和SIEM报警以及如何分类处置这些事件（其实相当于是一个指挥调度中枢），而TH（威胁狩猎）主要是基于一些数据和征兆进行分析安全事件，而不是直接的安全报警（相当于是前方侦察兵）。最后IR（事件响应）则是根据TH和SOC提供的信息进行相关的动作以及后面如何处理、取证、恢复等（相当于是快速反应部队）。
-三者的联系在于：</p>
+                <h1 id="_1">关于流量劫持问题</h1>
+<p>对流量劫持问题的一些整理，如侵权请联系删除( •̀ ω •́ )y</p>
+<p>从攻击面上来讲，流量劫持大概可以分为两个部分：本地劫持 和 网络劫持，本篇笔记在整理的过程中，也是按照这种方式。其中，本地劫持后面的几种方式，都可以归纳为网络劫持（即，离开用户主机后穿行于各个路由网关节点时所遭遇的劫持问题）。</p>
+<h2 id="0">0. 本地劫持</h2>
+<h3 id="_2">定义</h3>
+<p>常使用流氓软件的方式，安装在用户的客户端，与木马的行为本质无异（主页锁定，网页劫持、广告弹窗、流量暗刷、静默安装）。</p>
+<h3 id="_3">案例</h3>
 <ul>
-<li>TH将安全情报（Intelligence）输送给SOC团队（情报获取），并且从IR获取狩猎方法论（主动防御的措施，Methodologies）</li>
-<li>SOC输送安全事件（Incidents）给IR，并且从IR获取安全情报（Intelligence）</li>
-<li>IR接收TH和SOC输送的安全事件并进行进一步处理</li>
+<li>通过浏览器插件进行流量劫持的QTV系列变种[5]</li>
 </ul>
-<h2 id="_5">过程和方式</h2>
-<h3 id="_6">威胁狩猎的过程</h3>
-<p><img alt="" src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200321193053.png" />
-图：威胁狩猎的链条</p>
+<p><img alt="" src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200330124309.png" /></p>
+<p>​                 图：注入方式的劫持流程图</p>
 <ul>
-<li>基于假设作为狩猎起点</li>
-<li>发现IT资产中的异常情况，就可能事件做好安全假设</li>
-<li>借助工具和技术进行实际调查</li>
-<li>若发现新的攻击方式和手段（TTPs: Tactics, Techniques and Procedures 战术、技术和手段），则增加到分析平台（一般在SOC中）或者以情报的形式输入到SIEM（Security information and event management, SOC中的系统）中</li>
-<li>若SOC将安全事件输送到IR中，触发了事件响应，则完成一次闭环</li>
+<li>“高清影视流氓病毒”案例</li>
 </ul>
-<h3 id="_7">威胁狩猎的方式（起点）</h3>
-<p>威胁分析的起点，往往决定了分析的方式。TH的起点是假设，分为以下几种，也就是TH的方式：</p>
-<blockquote>
-<p><strong>基于分析的方式：</strong>分析分为两种，基本数据分析以及机器学习的UEBA的高级分析方式。
-<strong>基于重点的方式：</strong>皇冠珍珠分析法，基于IT资产中比较重要的资产进行重点关注。
-<strong>基于情报的方式：</strong>根据威胁情报提供的内容，进行威胁狩猎。[1]</p>
-</blockquote>
-<h2 id="_8">成熟度评价</h2>
-<p>威胁狩猎主要从分析水平、数据收集水平两个维度进行评价。这块主要针对企业的安全建设。</p>
-<blockquote>
-<p><strong>Level 0：</strong>基本的自动化报警但没有数据收集；
-<strong>Level 1：</strong>有一定的威胁情报处理能力和一定的数据收集能力；
-<strong>Level 2：</strong>遵循数据分析的流程和较高级别的日常数据采集；
-<strong>Level 3：</strong>有一些新的分析流程和高级别的日常数据收集；
-<strong>Level 4：</strong>自动化大部分的分析过程和高级别的日常数据收集。</p>
-</blockquote>
-<p><img alt="" src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200321193112.png" />
-图：威胁狩猎成熟度的全面分析</p>
-<h2 id="threat-hunders">Threat Hunders需要的技能</h2>
-<p>以下是通过采访统计出来的技能需要（从高到低排序）</p>
+<p><img alt="" src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200330124523.png" /></p>
+<p>​                 图：流氓软件方式的劫持流程图</p>
 <ul>
-<li>了解基线网络通信和活动（网络相关）</li>
-<li>应急响应（Incident response）</li>
+<li>广告弹窗挂马</li>
+</ul>
+<blockquote>
+<p>原本的广告流量被注入了网页木马，以广告弹窗等形式在客户端触发，这属于一种变相的流量劫持，更确切的说应该称之为“流量污染”或“流量投毒”[5]</p>
+</blockquote>
+<h2 id="1-dns">1. DNS劫持</h2>
+<h3 id="_4">定义</h3>
+<blockquote>
+<p>DNS劫持是你想去机场的时候，把你给丢到火车站。</p>
+</blockquote>
+<h3 id="_5">攻击方法</h3>
+<blockquote>
+<p><strong>1.本机DNS劫持</strong></p>
+<p>攻击者通过某些手段使用户的计算机感染上木马病毒，或者恶意软件之后，恶意修改本地DNS配置，比如修改本地hosts文件，缓存等</p>
+<p><strong>2. 路由DNS劫持</strong></p>
+<p>很多用户默认路由器的默认密码，攻击者可以侵入到路由管理员账号中，修改路由器的默认配置</p>
+<p><strong>3.攻击DNS服务器</strong></p>
+<p>直接攻击DNS服务器，例如对DNS服务器进行DDOS攻击，可以是DNS服务器宕机，出现异常请求，还可以利用某些手段感染dns服务器的缓存，使给用户返回来的是恶意的ip地址</p>
+<p>作者：Luxm
+链接：https://juejin.im/post/5cff858a6fb9a07ed84238ec
+来源：掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</blockquote>
+<h3 id="_6">防护手段</h3>
+<blockquote>
+<p><strong>1.加强本地计算机病毒检查，开启防火墙等，防止恶意软件，木马病毒感染计算机</strong></p>
+<p><strong>2.改变路由器默认密码，防止攻击者修改路由器的DNS配置指向恶意的DNS服务器</strong></p>
+<p><strong>3.企业的话可以准备两个以上的域名，一旦一个域名挂掉，还可以使用另一个</strong></p>
+<p><strong>4.用HTTP DNS 代替 Local DNS</strong></p>
+<p>作者：Luxm
+链接：https://juejin.im/post/5cff858a6fb9a07ed84238ec
+来源：掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</blockquote>
+<h2 id="2-http">2. HTTP劫持</h2>
+<h3 id="_7">定义</h3>
+<blockquote>
+<p>HTTP劫持是你去机场途中，有人给你塞小广告。</p>
+</blockquote>
+<h2 id="3">3. 证书劫持</h2>
+<p>HTTPS劫持，长以中间人攻击的形式存在。</p>
+<p>比如去年“哈萨克斯坦政府实施的电信级HTTPS劫持”过程中，就是哈政府要求公民安装</p>
+<h2 id="4">4. 链路劫持</h2>
+<p>链路（Data Link）劫持</p>
+<h3 id="_8">定义</h3>
+<blockquote>
+<p>TCP链路劫持其实就是指网络链路上侦听、伪造TCP包，达到控制目标网络链路的行为。最常见的就是某些设备实现的对非法站点的访问拦截，以及一些地区运营商的网页植入广告行为。</p>
+</blockquote>
+<p><img alt="" src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200330123718.png" /></p>
+<h3 id="_9">判断方法</h3>
+<ol>
+<li>应用层（e.g. BurpSuite）抓包，观察返回包的信息，受否有返回包的痕迹</li>
+<li>网络层（e.g. WireShark）抓包，分析HTTP/HTTPS的响应包是否有异常的</li>
+<li>分析HTTP、HTTPS包的TTL值</li>
+<li>在使用HTTPS的网站中，一般来说，在时间接近的情况下，连接相同的目标IP，数据包在链路上的路径是是近似的，相差在2、3左右</li>
+<li>可以根据时间排序，寻找TTL显著大的包，如果存在明显异常TTL的包，可以初步确定存在链路劫持</li>
+<li>分析包内容的Identification字段是否存在异常</li>
+<li>该字段主要用于<a href="https://blog.csdn.net/m0_37962600/article/details/80039349">IP分片</a> [3]<ul>
+<li>数据链路层具有最大传输单元MTU这个特性，它限制了数据帧（fragment）的最大长度。因此，通常要传输的IP报文大小超过最大传输单位（MTU）时，就会产生IP分片的情况，IP分片经常发生在网络环境中</li>
+<li>IP首部包含的分片、重组信息：<code>| Identification |R|DF|MF| Fragment Offset |</code></li>
+<li>注意其中的Identification。发送端发送的IP数据包标识字段都是一个单一值，该值在分片时被复制到每个片中。具有同一个ID的IP分片将会重新组装。</li>
+</ul>
+</li>
+<li>之所以引入这个概念，是因为在被劫持的情况下，IPID可能也会存在异常情况。比如在近期的GitHub HTTPS证书劫持事件，我们发现：“被劫持的会话数据包(https)全部回包的IPID都是0.  正常数据包(http)首次回包IPID是0，之后的回包就不是了”[1]</li>
+<li>这种与正常数据包（确定的）异样的情况，也可以帮助我们判断是否在链路存在劫持</li>
+</ol>
+<h3 id="_10">案例</h3>
+<ul>
 <li>
-<p>威胁情报与分析</p>
+<p>一些网站https证书出现问题的情况分析（3/26 GitHub证书劫持事件）</p>
 </li>
 <li>
-<p>了解基线端点应用程序、用户和访问</p>
+<p>文章：<a href="https://blog.netlab.360.com/ongoing-websites-hijacking/">Link</a></p>
 </li>
-<li>网络取证（Network forensics）</li>
-<li>终端取证（Endpoint forensics）</li>
-<li>恶意软件分析</li>
-<li>内存取证</li>
-<li>其它</li>
+<li>
+<p>某电商网站流量劫持案例分析与思考（来自腾讯SRC）</p>
+</li>
+<li>
+<p>文章：<a href="https://security.tencent.com/index.php/blog/msg/81">Link</a></p>
+</li>
 </ul>
-<p><img alt="" src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200321193135.png" />
-图：威胁狩猎团队成员应具备的技能[1]</p>
-<h2 id="_9">数据来源</h2>
-<p>从调查统计中，可以得到主要数据源为： SIEM报警、终端事件数据、IPDS数据、威胁情报、终端日志数据。
-<img alt="" src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200321193150.png" />
-图：威胁狩猎的数据来源[1]</p>
-<h2 id="_10">组织架构</h2>
-<p>了解威胁狩猎组织团队的架构，可以作为个人技术选型的参考。</p>
-<p><img alt="" src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200321193206.png" />
-图：威胁狩猎团队的组织架构</p>
-<p>即以下7种角色，有些角色可以合并为一个人，不一定是7个角色7个人。[1]</p>
+<h2 id="6">6. 运营商劫持</h2>
+<h3 id="_11">攻击方法</h3>
 <ul>
-<li>系统管理员</li>
-<li>主要针对SIEM系统的维护以及威胁狩猎平台的管理</li>
-<li>初级分析师</li>
-<li>使用SIEM系统和威胁狩猎平台，处理报警和一些基本平台使用</li>
-<li>中级分析师</li>
-<li>具有对威胁情报、日志的分析能力，同时也具有渗透测试和网络协议的知识</li>
-<li>高级分析师</li>
-<li>具有风险等级评估、漏洞管理、网络包和日志的深度分析能力、以及恶意软件分析能力</li>
-<li>取证专家</li>
-<li>对于内存、硬盘要有专业的取证知识，可以做时间链分析</li>
-<li>工具开发人员</li>
-<li>具备开发经验，可以自动化一些狩猎场景</li>
-<li>恶意软件分析工程师</li>
-<li>主要负责恶意软件的逆向，熟悉汇编语言等内容</li>
-<li>安全情报人员</li>
-<li>具有情报资深经验，能够筛选、使用、开发威胁情报</li>
+<li>DNS劫持</li>
+<li>HTTP劫持</li>
+<li>HTTPS劫持</li>
 </ul>
-<h2 id="_11"></h2>
-<h2 id="_12">具体步骤（管理角度）</h2>
-<p>从管理角度描述一下整个威胁狩猎的过程，一共分为六个步骤：目的确认、范围确认、技术准备、计划评审、执行、反馈 [1]</p>
-<p><img alt="" src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200321193220.png" />
-图：威胁狩猎的六个步骤</p>
-<p>范围确认和技术准备是其中比较重要的两块。</p>
-<h3 id="_13">范围确认</h3>
-<p>首先进行测试系统的选择，明确需要哪些数据和技术手段来进行威胁狩猎（熟悉测试范围）。
-其次，进行假设用例的开发（尤为关键），是威胁狩猎分析的起点，也是方式的选择，这个过程"来源于对数据的一些基本分析和高级分析，威胁情报的使用和收集以及对TTP的理解，甚至是一些核心能力的使用，比如使用搜索的分析能力"[1]。</p>
-<h3 id="_14">技术准备</h3>
-<h4 id="_15">数据收集</h4>
-<p>利用利用数据收集管理架构CMF(Collection Management Framework)，来评估收集的数据。参考以下的几个维度进行数据评估：</p>
-<ul>
-<li>位置</li>
-<li>数据类型</li>
-<li>KillChain阶段</li>
-<li>收集方法</li>
-<li>存储时间</li>
-</ul>
-<p>总体来说，数据收集的内容主要有三种：</p>
-<ul>
-<li>终端类型数据</li>
-<li>包数据</li>
-<li>日志数据</li>
-</ul>
-<p>收集形式主要有拉和推两种方式：</p>
-<ul>
-<li>主动拉取数据</li>
-<li>推送数据</li>
-</ul>
-<h4 id="_16">产品技术选型</h4>
-<ul>
-<li>分析能力</li>
-<li>安全大数据的分析能力、查询搜索能力和威胁情报处理能力。</li>
-<li>分析能力作为核心能力，不仅仅在于基本的筛选、分类以及排序，还需要高级的分析能力，比如UEBA的能力</li>
-<li>机器学习</li>
-<li>根据机器学习算法来进行建模分析，来定位一些异常行为，极大地降低了分析的难度</li>
-<li>查询搜索能力</li>
-<li>查询搜索能力是维持威胁狩猎日常运营的能力，一些疑似的攻击行为可以通过查询进行定位并可以进行深度定点分析。通过查询搜索能力来完成对于ATT&amp;CK场景的覆盖。</li>
-</ul>
-<h4 id="_17">威胁情报的使用</h4>
 <blockquote>
-<p>威胁情报的识别和使用是威胁狩猎平台比较常见的功能，可以根据<a href="https://www.jianshu.com/p/b3654b179277">痛苦金字塔</a>的威胁情报的使用，可以先从简单的文件hash和恶意IP开始使用，然后逐步加强对威胁情报的使用能力，到最后的TTP，乃至自己生产威胁情报。</p>
+<p>运营商比较常见的作恶方式有三种，分别是DNS劫持、HTTP劫持、HTTPS劫持：</p>
+<p>DNS劫持：这种劫持会把你重新定位到其它网站，我们所熟悉的钓鱼网站就是这个原理。但是因为它的违法性，现在被严厉的监管起来，已经很少见。</p>
+<p>HTTP劫持：虽然DNS劫持已经被监管了起来，但是还有HTTP劫持啊！你DNS解析的域名的IP地址不变，当运营商发现你的是HTTP请求时，就会在里面插入一些奇奇怪怪的广告（比如一些banner、浮标、更有甚把你你的商品位给劫持了 WTF...）并且这种现象十分常见，不信你可以试着随便打开一个网页，仔细看看你就会发现一些小尾巴，这就是被HTTP劫持了。</p>
+<p>HTTPS劫持：安全的超文本传输协议，数据加密这也能劫持？答案是肯定的！该劫持方式有两种：</p>
+<ol>
+<li>伪造证书，通过病毒或者其他方式将伪造证书的根证书安装在用户系统中（较少）</li>
+<li>代理也有客户的证书与私钥，或者客户端与代理认证的时候不校验合法性，即可通过代理来与我们服务端进行数据交互（较多）</li>
+</ol>
+<p>作者：Eddiezsl
+链接：https://juejin.im/post/5bea7eb4f265da612859a9e4
+来源：掘金
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 </blockquote>
-<h2 id="_18"></h2>
-<h2 id="_19">解决方案（产品与实例）</h2>
-<h3 id="siem">SIEM类产品</h3>
+<h3 id="_12">防护手段</h3>
+<p>主要是“防script、iframe注入型劫持，95%以上是这种劫持方式，因为DNS劫持被严管了” [4]</p>
+<h2 id="7-cdn">7. CDN缓存污染</h2>
+<h3 id="_13">定义</h3>
 <ul>
-<li>SIEM魔力象限的领导者象限</li>
-<li>IBM的QRadar</li>
-<li>Splunk的Threat Hunting</li>
-<li>Logrhythm的威胁狩猎是通</li>
-<li>Securonix</li>
-<li>Exabeam威胁狩猎产品Threat Hunter</li>
+<li>补充</li>
+<li>CDN：CDN加速技术本质上是一种良性的DNS劫持，通过DNS引导将用户对服务器上的js、图片等不经常变化的静态资源的请求引导到最近的服务器上，从而加速网络访问。</li>
 </ul>
-<h3 id="_20">终端类产品</h3>
+<h3 id="_14">案例</h3>
 <ul>
-<li>Crowdstrike</li>
-<li>Cylance</li>
-<li>Carbon Black</li>
-<li>Endgame</li>
-<li>SentinelOne</li>
+<li>百度网盟CDN缓存服务器中的关键JS文件被污染注入广告代码</li>
+<li>参考：<a href="https://paper.seebug.org/181/#246-cdn">Link</a></li>
 </ul>
-<h3 id="mdr">MDR类服务</h3>
+<h2 id="8">8. 软件升级劫持</h2>
+<p>这种攻击类型比较特殊，攻击方式很广，不太容易归为一种链路劫持获运营商劫持，特此单列。</p>
+<h3 id="_15">定义</h3>
+<p>往往是在劫持了某个正规软件的升级程序后，在用户更新软件时感染病毒。</p>
+<h3 id="_16">案例</h3>
 <ul>
-<li>Red Canary's Approach to Hunting</li>
+<li>
+<p>乌克兰 Petya勒索病毒变种</p>
+</li>
+<li>
+<p>参考：<a href="https://s.tencent.com/research/report/266.html">Link</a></p>
+</li>
+<li>
+<p>爱奇艺客户端升级程序被劫持</p>
+</li>
+<li>
+<p>参考：<a href="https://www.easyaq.com/news/675361761.shtml">Link</a></p>
+</li>
 </ul>
+<h2 id="addition">Addition</h2>
+<h3 id="osi">OSI七层模型</h3>
+<p>经常会用到，但总会忘记，有些基础的，一定要记住。</p>
+<p><img alt="" src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200330111454.png" /></p>
 <h2 id="reference">Reference</h2>
-<p>[1] 威胁狩猎101文档, 程度, <a href="https://www.secrss.com/articles/17910">https://www.secrss.com/articles/17910</a>
-[2] 【公益译文】网络安全滑动标尺模型–SANS分析师白皮书, 绿盟科技，<a href="http://blog.nsfocus.net/sliding-scale-cyber-security/">http://blog.nsfocus.net/sliding-scale-cyber-security/</a></p>
+<p>[1] 你需要知道的“DNS劫持”--web安全篇（1）, https://juejin.im/post/5cff858a6fb9a07ed84238ec</p>
+<p>[2] 链路劫持攻击一二三, https://security.tencent.com/index.php/blog/msg/10</p>
+<p>[3] 浅谈IP分片的大小及其原因，https://blog.csdn.net/m0_37962600/article/details/80039349</p>
+<p>[4] 干货！防运营商劫持, https://juejin.im/post/5bea7eb4f265da612859a9e4</p>
+<p>[5] 互联网黑势力之流量劫持，https://paper.seebug.org/181/#146</p>
                 
                   
                 
@@ -1179,7 +1225,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../0x0_%E7%90%86%E8%A7%A3/%E5%AF%B9%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5%E7%9A%84%E7%90%86%E8%A7%A3/" title="对安全运营的理解" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../%E5%AF%B9%E9%BB%91%E7%81%B0%E4%BA%A7%E7%9A%84%E7%A0%94%E7%A9%B6/" title="黑灰产研究" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1188,19 +1234,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                对安全运营的理解
+                黑灰产研究
               </span>
             </div>
           </a>
         
         
-          <a href="../1x1_%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E5%85%B1%E4%BA%AB/" title="如何实现威胁情报共享" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../0x3_%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/" title="应急响应" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                如何实现威胁情报共享
+                应急响应
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
