@@ -69,3 +69,8 @@ Part3：威胁大屏展示（全面发现各种疑似、潜藏威胁）
     - NAC（Network access control，网络访问控制）
     - 编排自动化工具（参考SOA部分）
 
+
+
+## References
+
+[1] 也来聊聊态势感知（上），大兵说安全，https://mp.weixin.qq.com/s/dCGMfKsFzYaZiffjkBBYpg
