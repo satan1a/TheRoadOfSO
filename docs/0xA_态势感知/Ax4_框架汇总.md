@@ -1,0 +1,16 @@
+# 框架与模型汇总
+
+本篇整理一些态势感知相关的技术框架和相关模型
+
+## 框架
+
+### 安全运营+情报
+![](https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200714143330.png)
+
+Fig. 安全运营中威胁情报的应用
+
+
+
+## References
+
+[1] 安全运营中威胁情报的应用，姜明元，https://cloud.ssetech.com.cn/p/DUf-3PEQtwcY7gg
