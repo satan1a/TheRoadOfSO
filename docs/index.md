@@ -18,4 +18,4 @@
 
 ---
 
-这是我的WeChat账号：`d3hzejAzMjk=`，欢迎互相交流！ 
+这是我的邮箱📮：`c2F0YW5pYTIzM0BnbWFpbC5jb20=`，欢迎互相交流！ 
