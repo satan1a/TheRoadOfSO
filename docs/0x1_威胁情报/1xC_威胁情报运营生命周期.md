@@ -1,12 +1,48 @@
-# 威胁情报运营生命周期
+# 威胁情报的生命周期
 
-![](https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200814121735.png)
+<img src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200814121735.png" style="zoom:50%;" />
 
-https://zhuanlan.zhihu.com/p/38532724
+图：威胁情报的生命周期[1]
 
 
 
 ## 一个中心
+
+>   Plan（企业威胁情报计划）：这里的Plan实际上是指安全管理团队针对威胁情报所指定的情报计划，情报计划应包括威胁情报对应的安全风险点（包括但不限于业务安全、IT资产安全）、对应情报大类（包括但不限于战术情报、战略情报、运营情报、二次生产情报）、情报小类（包括但不限于pDNS情报、Whois情报、钓鱼网站情报、黑产情报）以及闭环跟进流程。一套完整的情报计划实际上是可以达到指导现有安全体系建设和改进方向作用的。[2]
+
+
+
+简单来说，一个关于情报的计划是用来回答以下的几个问题：**针对什么？要做什么？怎么做？怎么安排？**
+
+对应以下的几个技术需求：
+
+-   分析和确定**安全风险点**
+    -   业务安全
+    -   IT资产安全
+    -   ...
+-   关于**情报大类**的研究
+    -   按使用场景分
+        -   战术情报
+        -   战略情报
+        -   运营情报
+    -   按类型分
+        -   资产情报
+        -   事件情报
+        -   漏洞情报
+
+        -   威胁情报
+    -   ...
+-   关于**情报小类**（安全威胁情报）的研究
+    -   pDNS情报
+    -   Whois情报
+    -   钓鱼网站情报
+    -   黑产情报
+    -   ...
+-   规划**闭环跟进流程**
+    -   组织和规划整个威胁情报的发现、生产、交付等整个环节
+    -   ...
+
+
 
 ## 五个环节
 
@@ -50,7 +86,7 @@ https://zhuanlan.zhihu.com/p/38532724
 
 
 
-## 参考
+## 相关参考
 
 -   https://zhuanlan.zhihu.com/p/129064940
 -   https://zhuanlan.zhihu.com/p/38532724
@@ -60,6 +96,7 @@ https://zhuanlan.zhihu.com/p/38532724
 
 ## References
 
-\[1] https://zhuanlan.zhihu.com/p/38009342
+\[1] 从EDR到威胁情报运营——浅谈终端化的情报部署, [e1knot](https://www.zhihu.com/people/elknot), https://zhuanlan.zhihu.com/p/38009342
 
-\[2] 
+\[2] 浅谈威胁情报从甲方运营到乙方交付, [e1knot](https://www.zhihu.com/people/elknot), https://zhuanlan.zhihu.com/p/38532724
+
