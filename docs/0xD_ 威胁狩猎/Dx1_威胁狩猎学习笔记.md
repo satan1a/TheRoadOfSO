@@ -4,11 +4,25 @@
 
 //TODO
 
-## Model
+
+
+
+
+## 威胁狩猎模型
 
 威胁狩猎模型可以分为，IOC-Based Hunting和TTP-Based Hunting。
 
 
+
+
+
+
+
+## 一些流程
+
+![](https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200821122907.png)
+
+图：威胁狩猎的流程[1]
 
 
 
@@ -21,3 +35,9 @@
 -   https://www.youtube.com/watch?v=60pyxA0U9EQ
 -   https://chrissanders.org/training/elk/
 -   https://www.aqniukt.com/course/2062
+
+
+
+## References
+
+\[1] 威胁情报的私有化生产和级联：威胁狩猎及情报共享, [狴犴安全团队 ], (https://www.freebuf.com/author/狴犴安全团队) https://www.freebuf.com/articles/es/222359.html

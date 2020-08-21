@@ -12,5 +12,23 @@
 
 
 
+## 一些方案
 
+![](https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200821122607.png)
+
+图：威胁情报上下游对接[1]
+
+![image.png](https://image.3001.net/images/20191211/15760797325090.png!small)
+
+图：现有威胁情报库层级[1]
+
+
+
+
+
+
+
+## References
+
+\[1] 威胁情报的私有化生产和级联：威胁狩猎及情报共享, [狴犴安全团队 ], (https://www.freebuf.com/author/狴犴安全团队) https://www.freebuf.com/articles/es/222359.html
 
