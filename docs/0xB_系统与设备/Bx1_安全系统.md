@@ -41,6 +41,16 @@ WAF是在应用层防护Web攻击的程序，一般是跟Web接入层对接，�
 
 
 
+## EDR 
+
+Endpoint Detection and Response, 端点检测与响应，通过在主机端上部署agent，然后由agent采集数据，对大量数据进行分类、进行处理，然后对事件进行分析、分析、响应。
+
+
+
+## NAT
+
+Network Traffic Analysis，常指网络流量分析产品，它将网络通信流量作为基础数据源，输出威胁事件，与IDS的不同是其模型检测为核心，IDS以特征检测为核心[1]
+
 
 
 ## References
