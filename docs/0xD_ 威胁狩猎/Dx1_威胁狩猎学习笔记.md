@@ -18,3 +18,6 @@
 
 -   https://paper.seebug.org/1132/
 
+-   https://www.youtube.com/watch?v=60pyxA0U9EQ
+-   https://chrissanders.org/training/elk/
+-   https://www.aqniukt.com/course/2062
