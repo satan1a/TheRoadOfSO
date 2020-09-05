@@ -45,7 +45,15 @@
 
 
 
+
+
 ## 数据源形式
+
+### 总体的类别
+
+
+
+### 详细的类别
 
 <img src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200815211931.png" style="zoom:50%;" />
 
