@@ -6,6 +6,10 @@ theme:
   palette:
     primary: 'white'
     accent: 'red'
+  icon:
+  logo: 'assets/logo_white.png'
+  favicon: 'assets/favicon.ico'
+
 
 extra:
   search:
