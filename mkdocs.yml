@@ -1,7 +1,12 @@
 site_name: 安全运营之路
 
 theme:
-        name: 'material'
+  name: 'material'
+  language: 'zh'
+  palette:
+    primary: 'white'
+    accent: 'red'
+
 extra:
   search:
     language: 'jp'
