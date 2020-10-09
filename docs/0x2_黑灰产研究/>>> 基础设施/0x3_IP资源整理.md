@@ -28,6 +28,10 @@
 
 ## 2. 代理池工具
 
+-   [推荐]proxy_pool，https://github.com/jhao104/proxy_pool
+
+    -   >   Python爬虫代理IP池(proxy pool)，主要功能为定时采集网上发布的免费代理验证入库，定时验证入库的代理保证代理的可用性，提供API和CLI两种使用方式。
+
 -   Golang实现的IP代理池，https://github.com/henson/proxypool
     
     -   >   采集免费的代理资源为爬虫提供有效的IP代理
@@ -39,3 +43,4 @@
 -   MXProxyPool，https://github.com/iamhmx/MXProxyPool
     
     -   >   动态代理IP池
+
