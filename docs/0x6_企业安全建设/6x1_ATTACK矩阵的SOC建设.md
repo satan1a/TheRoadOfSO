@@ -1,18 +1,19 @@
 # ATT&CK矩阵的SOC建设
 
-本文主要内容来自[ATT&CK矩阵Linux系统安全实践](https://www.freebuf.com/articles/es/231784.html)一文, 感谢作者的分享. 本文只做笔记与自我思考的记录, 如有侵权请告知,感谢!
+~~本文主要内容来自[ATT&CK矩阵Linux系统安全实践](https://www.freebuf.com/articles/es/231784.html)一文, 感谢作者的分享。~~
+
+本文只做笔记与自我思考的记录, 如有侵权请告知,感谢!
 
 
 
-## SOC建设的常见思路
+## 1. 建设思路汇总
 
-- 方案1: 流量检测 + 安服(应急响应方向)
-
-- // TODO 
-
+- 方案1: 从主机信息采集出发，进行基于ATT&CK矩阵的入侵检测
+- 方案2: 从网络层面、主机层和Windows服务器出发，进行入侵溯源
 
 
-## 方案一详解
+
+## 1.1 方案一详解
 
 ### 入侵检测
 
@@ -185,6 +186,20 @@ Fig. 入侵检测相应规则
 
 
 
+## 1.2 方案二详解
+
+### 总体架构
+
+![安全运营之攻击溯源](https://img.4hou.com/uploads/ueditor/php/upload/image/20201103/1604340947425759.png)
+
+图：基于ATT&CK矩阵的攻击链分析解决方案[2]
+
+
+
+
+
+
+
 ### 总结
 
 MITRE ATT&CK矩阵 从某种程度上来讲, 就是安全攻防时的一种兵法. 将战术和技术进行理论化的排列, 完成一个通用的攻击序列.
@@ -199,3 +214,4 @@ MITRE ATT&CK矩阵 从某种程度上来讲, 就是安全攻防时的一种兵�
 
 [1] ATT&CK矩阵Linux系统安全实践, https://www.freebuf.com/articles/es/231784.html
 
+\[2] 安全运营之攻击溯源, [bt0sea](https://www.4hou.com/member/dJY9), https://www.4hou.com/posts/x9KP
