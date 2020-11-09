@@ -27,4 +27,4 @@ Tips：**切忌泛而不精！**
 
 ---
 
-这是我的邮箱📮：contact@y1ng.com 欢迎交流！
+这是我的邮箱📮：`contact@y1ng.com` 欢迎交流！
