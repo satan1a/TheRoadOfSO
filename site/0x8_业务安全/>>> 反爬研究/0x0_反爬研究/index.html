@@ -1,0 +1,3250 @@
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.0">
+    
+    
+      
+        <title>反爬研究 - 安全运营之路</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.b5d04df8.min.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.9ab2c1f8.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="安全运营之路" class="md-header-nav__button md-logo" aria-label="安全运营之路">
+      
+  <img src="../../../assets/logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            安全运营之路
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              反爬研究
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="安全运营之路" class="md-nav__button md-logo" aria-label="安全运营之路">
+      
+  <img src="../../../assets/logo_white.png" alt="logo">
+
+    </a>
+    安全运营之路
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      0x0 理解
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="0x0 理解" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        0x0 理解
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x0_%E7%90%86%E8%A7%A3/0x0_%E5%AF%B9%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5%E7%9A%84%E7%90%86%E8%A7%A3/" title="对安全运营的理解" class="md-nav__link">
+      对安全运营的理解
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x0_%E7%90%86%E8%A7%A3/0x2_%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5%E5%81%9A%E4%BB%80%E4%B9%88/" title="安全运营做什么" class="md-nav__link">
+      安全运营做什么
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x0_%E7%90%86%E8%A7%A3/0x3_%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5%E7%9A%84%E8%A6%81%E7%B4%A0/" title="安全运营的要素" class="md-nav__link">
+      安全运营的要素
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      0x1 威胁情报
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="0x1 威胁情报" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        0x1 威胁情报
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x0_%E5%AE%89%E5%85%A8%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E7%AE%80%E8%BF%B0/" title="安全威胁情报简述" class="md-nav__link">
+      安全威胁情报简述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x1_%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E5%85%B1%E4%BA%AB/" title="如何实现威胁情报共享" class="md-nav__link">
+      如何实现威胁情报共享
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x2_%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/" title="威胁狩猎" class="md-nav__link">
+      威胁狩猎
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x3_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E4%B8%8E%E5%85%A8%E6%B5%81%E9%87%8F%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" title="威胁情报与全流量异常检测案例分析" class="md-nav__link">
+      威胁情报与全流量异常检测案例分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x4_%E7%A7%BB%E5%8A%A8%E6%81%B6%E6%84%8F%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90%E5%8F%8A%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/" title="移动恶意代码分析及威胁情报" class="md-nav__link">
+      移动恶意代码分析及威胁情报
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x5_%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E6%83%85%E6%8A%A5%E6%90%9C%E9%9B%86/" title="如何进行情报搜集？" class="md-nav__link">
+      如何进行情报搜集？
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x6_%E6%83%85%E6%8A%A5%E7%A0%94%E5%88%A4/" title="情报研判" class="md-nav__link">
+      情报研判
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x7_%E7%BB%88%E7%AB%AF%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/" title="终端数据挖掘与威胁狩猎" class="md-nav__link">
+      终端数据挖掘与威胁狩猎
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x8_WeChat%E5%86%85%E5%AE%B9%E5%AE%A1%E6%9F%A5%E7%A0%94%E7%A9%B61/" title="WeChat内容审查研究(1)" class="md-nav__link">
+      WeChat内容审查研究(1)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1x9_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E8%87%AA%E5%8A%A8%E5%8C%96%E7%94%9F%E4%BA%A7/" title="威胁情报自动化生产" class="md-nav__link">
+      威胁情报自动化生产
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xB_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E5%BA%93%E5%BB%BA%E8%AE%BE/" title="威胁情报库建设" class="md-nav__link">
+      威胁情报库建设
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xC_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E8%BF%90%E8%90%A5%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" title="威胁情报的生命周期" class="md-nav__link">
+      威胁情报的生命周期
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xD_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E6%95%B0%E6%8D%AE%E6%BA%90/" title="威胁情报数据源" class="md-nav__link">
+      威胁情报数据源
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xE_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E7%9A%84%E8%90%BD%E5%9C%B0/" title="威胁情报的落地" class="md-nav__link">
+      威胁情报的落地
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xF_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5%E7%9A%84%E5%9B%B0%E5%A2%83/" title="威胁情报的困境" class="md-nav__link">
+      威胁情报的困境
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xG_%E6%83%85%E6%8A%A5%E7%A0%94%E7%A9%B6%E6%96%B9%E6%B3%95%E8%AE%BA_%E6%94%B6%E9%9B%86/" title="情报研究方法论——对情报收集工作的展望" class="md-nav__link">
+      情报研究方法论——对情报收集工作的展望
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xH_%E5%85%B3%E4%BA%8E%E6%83%85%E6%8A%A5%E5%AD%A6%E7%9A%84%E5%AD%A6%E6%9C%AF%E8%B5%84%E6%96%99%E6%95%B4%E5%90%88/" title="[TODO] 关于情报学的学术资料整合" class="md-nav__link">
+      [TODO] 关于情报学的学术资料整合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x1_%E5%A8%81%E8%83%81%E6%83%85%E6%8A%A5/1xI_%E6%83%85%E6%8A%A5%E9%A9%B1%E5%8A%A8%E5%AE%89%E5%85%A8%E8%87%AA%E5%8A%A8%E5%8C%96/" title="情报驱动安全自动化" class="md-nav__link">
+      情报驱动安全自动化
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      0x2 黑灰产研究
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="0x2 黑灰产研究" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        0x2 黑灰产研究
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/2x0_%E5%AF%B9%E9%BB%91%E7%81%B0%E4%BA%A7%E7%9A%84%E7%A0%94%E7%A9%B6/" title="黑灰产研究" class="md-nav__link">
+      黑灰产研究
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/2x1_%E6%B5%81%E9%87%8F%E5%8A%AB%E6%8C%81/" title="关于流量劫持问题" class="md-nav__link">
+      关于流量劫持问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/2x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E8%B5%84%E4%BA%A7%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86/" title="[TODO]黑灰产的资产信息搜集" class="md-nav__link">
+      [TODO]黑灰产的资产信息搜集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/2x4_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6%E6%A1%88%E4%BE%8B/" title="[TODO]黑灰研究案例" class="md-nav__link">
+      [TODO]黑灰研究案例
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/2x5_%E9%BB%91%E7%81%B0%E4%BA%A7%E5%BD%A2%E5%BC%8F/" title="[Doing] 黑灰产形式" class="md-nav__link">
+      [Doing] 黑灰产形式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/2x6_%E9%BB%91%E7%81%B0%E4%BA%A7%E6%95%B4%E6%B2%BB%E6%B3%95%E8%A7%84/" title="[TODO] 黑灰产整治法规政策" class="md-nav__link">
+      [TODO] 黑灰产整治法规政策
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/2x7_%E9%BB%91%E8%AF%8D_%E9%BB%91%E8%AF%9D%E5%A4%A7%E5%85%A8/" title="[Doing] 黑词及黑话大全" class="md-nav__link">
+      [Doing] 黑词及黑话大全
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/2x8_%E4%BA%A7%E4%B8%9A%E9%93%BE%E5%88%86%E6%9E%90/" title="[Doing] 对于黑灰产行业的产业链分析" class="md-nav__link">
+      [Doing] 对于黑灰产行业的产业链分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/2x9_%E7%9B%B8%E5%85%B3%E7%A0%94%E7%A9%B6%E8%80%85/" title="[Doing] 相关研究者" class="md-nav__link">
+      [Doing] 相关研究者
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/2xA_%E4%BB%A3%E7%90%86%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3%E7%A0%94%E7%A9%B6/" title="[Doing] 代理技术相关研究" class="md-nav__link">
+      [Doing] 代理技术相关研究
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/2xB_%E5%85%B8%E5%9E%8B%E5%8F%8D%E6%AC%BA%E8%AF%88%E4%B8%9A%E5%8A%A1%E5%9C%BA%E6%99%AF%E5%88%86%E6%9E%90/" title="典型（反欺诈）业务场景风险分析" class="md-nav__link">
+      典型（反欺诈）业务场景风险分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/2xC_%E9%BB%91%E7%81%B0%E4%BA%A7%E6%95%B0%E6%8D%AE%E7%9B%91%E6%8E%A7/" title="黑灰产数据监控" class="md-nav__link">
+      黑灰产数据监控
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/2xD_%E9%BB%91%E7%81%B0%E4%BA%A7%E8%88%86%E6%83%85%E7%9B%91%E6%8E%A7/" title="黑灰产舆情监控" class="md-nav__link">
+      黑灰产舆情监控
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-14" type="checkbox" id="nav-4-14">
+    
+    <label class="md-nav__link" for="nav-4-14">
+      >>> 基础设施
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label=">>> 基础设施" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-14">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        >>> 基础设施
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/%3E%3E%3E%20%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD/0x0_%E9%BB%91%E7%81%B0%E4%BA%A7%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD/" title="黑灰产基础设施" class="md-nav__link">
+      黑灰产基础设施
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/%3E%3E%3E%20%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD/0x1_%E6%8E%A5%E7%A0%81%E5%B9%B3%E5%8F%B0%E6%95%B4%E7%90%86/" title="接码平台整理" class="md-nav__link">
+      接码平台整理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/%3E%3E%3E%20%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD/0x2_%E6%89%93%E7%A0%81%E5%B9%B3%E5%8F%B0%E6%95%B4%E7%90%86/" title="打码平台整理" class="md-nav__link">
+      打码平台整理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/%3E%3E%3E%20%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD/0x3_IP%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/" title="IP资源整理" class="md-nav__link">
+      IP资源整理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/%3E%3E%3E%20%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD/0x4_%E7%BE%A4%E6%8E%A7%E7%9B%B8%E5%85%B3/" title="群控相关" class="md-nav__link">
+      群控相关
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-15" type="checkbox" id="nav-4-15">
+    
+    <label class="md-nav__link" for="nav-4-15">
+      >>> 黑灰产对抗
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label=">>> 黑灰产对抗" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-15">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        >>> 黑灰产对抗
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/%3E%3E%3E%20%E9%BB%91%E7%81%B0%E4%BA%A7%E5%AF%B9%E6%8A%97/0X1_%E4%B8%8D%E5%90%8C%E5%9C%BA%E6%99%AF%E4%B8%8B%E7%9A%84%E5%AF%B9%E6%8A%97%E5%88%86%E6%9E%90/" title="场景下的风险分析" class="md-nav__link">
+      场景下的风险分析
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/%3E%3E%3E%20%E9%BB%91%E7%81%B0%E4%BA%A7%E5%AF%B9%E6%8A%97/0X3_%E5%B7%A5%E5%85%B7%E5%AF%B9%E6%8A%97/" title="[TODO]工具对抗" class="md-nav__link">
+      [TODO]工具对抗
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/%3E%3E%3E%20%E9%BB%91%E7%81%B0%E4%BA%A7%E5%AF%B9%E6%8A%97/0x0_%E6%80%BB%E4%BD%93%E7%9A%84%E5%AF%B9%E6%8A%97%E6%80%9D%E8%B7%AF/" title="总体的思路" class="md-nav__link">
+      总体的思路
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x2_%E9%BB%91%E7%81%B0%E4%BA%A7%E7%A0%94%E7%A9%B6/%3E%3E%3E%20%E9%BB%91%E7%81%B0%E4%BA%A7%E5%AF%B9%E6%8A%97/0x2_%E7%AE%97%E6%B3%95%E5%B1%82%E9%9D%A2%E4%B8%8A%E7%9A%84%E5%AF%B9%E6%8A%97%E5%88%86%E6%9E%90/" title="[TODO]算法层面上的对抗分析" class="md-nav__link">
+      [TODO]算法层面上的对抗分析
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      0x3 企业安全建设
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="0x3 企业安全建设" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        0x3 企业安全建设
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x3_%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3x1_ATTACK%E7%9F%A9%E9%98%B5%E7%9A%84SOC%E5%BB%BA%E8%AE%BE/" title="ATT&CK矩阵的SOC建设" class="md-nav__link">
+      ATT&CK矩阵的SOC建设
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x3_%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3x2_%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B9%B3%E5%8F%B0/" title="大数据分析平台" class="md-nav__link">
+      大数据分析平台
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x3_%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3x3_%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/" title="相关文章" class="md-nav__link">
+      相关文章
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x3_%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3x4_%E4%BC%81%E4%B8%9A%E9%A3%8E%E6%8E%A7%E5%B9%B3%E5%8F%B0%E5%BB%BA%E8%AE%BE/" title="企业业务风控平台建设" class="md-nav__link">
+      企业业务风控平台建设
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x3_%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3x5_%E7%94%B5%E6%8A%A5%E7%9B%91%E6%8E%A7%E5%B9%B3%E5%8F%B0%E5%BB%BA%E8%AE%BE/" title="电报监控平台建设" class="md-nav__link">
+      电报监控平台建设
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x3_%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3x6_%E5%9B%9B%E5%A4%A7%E4%BB%B7%E5%80%BC%E9%9C%80%E6%B1%82/" title="企业安全四大价值需求" class="md-nav__link">
+      企业安全四大价值需求
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x3_%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3x7_%E7%90%86%E8%A7%A3%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5%E4%B8%AD%E7%9A%84%E5%A8%81%E8%83%81%E4%BA%A4%E6%8D%A2/" title="理解企业安全运营中的威胁交换" class="md-nav__link">
+      理解企业安全运营中的威胁交换
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x3_%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3x8_MITRE_Shield%E7%9F%A5%E8%AF%86%E5%BA%93/" title="MITRE Shield知识库" class="md-nav__link">
+      MITRE Shield知识库
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x3_%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3x9_%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%E5%AE%89%E5%85%A82.0/" title="数据驱动安全2.0" class="md-nav__link">
+      数据驱动安全2.0
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x3_%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3xA_%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B_%E9%98%B2%E6%8A%A4%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BB%BA%E8%AE%BE/" title="入侵检测&防护系统概述" class="md-nav__link">
+      入侵检测&防护系统概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-11" type="checkbox" id="nav-5-11">
+    
+    <label class="md-nav__link" for="nav-5-11">
+      3xB 态势感知相关
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="3xB 态势感知相关" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-11">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        3xB 态势感知相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x3_%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3xB_%E6%80%81%E5%8A%BF%E6%84%9F%E7%9F%A5%E7%9B%B8%E5%85%B3/0x0_README/" title="态势感知" class="md-nav__link">
+      态势感知
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x3_%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3xB_%E6%80%81%E5%8A%BF%E6%84%9F%E7%9F%A5%E7%9B%B8%E5%85%B3/0x1_%E7%9B%B8%E5%85%B3%E5%B7%A5%E4%BD%9C/" title="相关工作整合" class="md-nav__link">
+      相关工作整合
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x3_%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3xB_%E6%80%81%E5%8A%BF%E6%84%9F%E7%9F%A5%E7%9B%B8%E5%85%B3/0x2_%E7%9B%B8%E5%85%B3%E4%B9%A6%E7%B1%8D/" title="态势感知相关书籍" class="md-nav__link">
+      态势感知相关书籍
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x3_%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3xB_%E6%80%81%E5%8A%BF%E6%84%9F%E7%9F%A5%E7%9B%B8%E5%85%B3/0x3_%E7%9B%B8%E5%85%B3%E4%BA%A7%E5%93%81/" title="相关产品" class="md-nav__link">
+      相关产品
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x3_%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3xB_%E6%80%81%E5%8A%BF%E6%84%9F%E7%9F%A5%E7%9B%B8%E5%85%B3/0x4_%E6%A1%86%E6%9E%B6%E6%B1%87%E6%80%BB/" title="框架与模型汇总" class="md-nav__link">
+      框架与模型汇总
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x3_%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E5%BB%BA%E8%AE%BE/3xB_%E6%80%81%E5%8A%BF%E6%84%9F%E7%9F%A5%E7%9B%B8%E5%85%B3/0x5_%E8%B6%8B%E5%8A%BF%E6%8A%A5%E5%91%8A/" title="趋势报告" class="md-nav__link">
+      趋势报告
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      0x4 安全数据分析
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="0x4 安全数据分析" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        0x4 安全数据分析
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x4_%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/4x0_%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%9B%B8%E5%85%B3/" title="数据分析相关" class="md-nav__link">
+      数据分析相关
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x4_%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/4x1_%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%E5%AE%89%E5%85%A8%E5%85%A5%E9%97%A8%E6%A6%82%E8%A7%88/" title="数据驱动安全入门概览" class="md-nav__link">
+      数据驱动安全入门概览
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x4_%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/4x2_%E7%9B%B8%E5%85%B3%E6%AF%94%E8%B5%9B/" title="相关比赛" class="md-nav__link">
+      相关比赛
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x4_%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/4x3_%E7%9B%B8%E5%85%B3%E9%A1%B9%E7%9B%AE/" title="相关项目" class="md-nav__link">
+      相关项目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x4_%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/4x4_%E7%9B%B8%E5%85%B3%E7%A0%94%E7%A9%B6%E8%80%85/" title="相关研究者" class="md-nav__link">
+      相关研究者
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x4_%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/4x5_%E5%B7%A5%E7%A8%8B%E5%8C%96%E5%AE%9E%E6%88%98%E6%80%9D%E8%B7%AF/" title="工程化实战思路" class="md-nav__link">
+      工程化实战思路
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x4_%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/4x6_%E5%91%8A%E8%AD%A6%E7%AD%9B%E9%80%89%E7%AC%94%E8%AE%B0/" title="告警筛选笔记" class="md-nav__link">
+      告警筛选笔记
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x4_%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/4x7_%E4%BA%86%E8%A7%A3%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE/" title="了解安全数据" class="md-nav__link">
+      了解安全数据
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x4_%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/4x8_%E5%85%B3%E4%BA%8E%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%E4%BA%8B%E4%BB%B6%E8%B0%83%E6%9F%A5%E7%9A%84%E6%80%9D%E8%80%83/" title="关于数据驱动事件调查的思考" class="md-nav__link">
+      关于数据驱动事件调查的思考
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x4_%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/4x9_%E5%A8%81%E8%83%81%E6%A3%80%E6%B5%8B%E4%B8%8E%E5%93%8D%E5%BA%94%E6%80%9D%E8%B7%AF%E6%B1%87%E6%80%BB/" title="威胁检测与响应（闭环）思路汇总" class="md-nav__link">
+      威胁检测与响应（闭环）思路汇总
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x4_%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/4xA_%E5%85%B3%E4%BA%8E%E8%87%AA%E5%8A%A8%E5%8C%96%E5%A8%81%E8%83%81%E5%88%86%E6%9E%90%E7%9A%84%E6%8E%A2%E7%B4%A2/" title="关于自动化威胁分析的探索" class="md-nav__link">
+      关于自动化威胁分析的探索
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x4_%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/4xB_%E5%9F%BA%E4%BA%8E%E6%95%B0%E6%8D%AE%E7%9A%84%E9%9A%90%E8%94%BD%E9%80%9A%E4%BF%A1%E6%A3%80%E6%B5%8B/" title="基于数据的隐蔽通讯检测" class="md-nav__link">
+      基于数据的隐蔽通讯检测
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x4_%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/4xC_%E5%9F%BA%E4%BA%8E%E6%95%B0%E6%8D%AE%E7%9A%84%E4%BB%A3%E7%90%86%E9%80%9A%E4%BF%A1%E6%A3%80%E6%B5%8B/" title="基于数据的代理通信检测" class="md-nav__link">
+      基于数据的代理通信检测
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x4_%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/4xD_%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99%E6%95%B4%E5%90%88/" title="安全数据分析相关资料整合" class="md-nav__link">
+      安全数据分析相关资料整合
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      0x5 攻防对抗
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="0x5 攻防对抗" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        0x5 攻防对抗
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x5_%E6%94%BB%E9%98%B2%E5%AF%B9%E6%8A%97/5x0_%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/" title="安全运营相关文章" class="md-nav__link">
+      安全运营相关文章
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      0x6 应急响应
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="0x6 应急响应" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        0x6 应急响应
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x6_%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/6x0_%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/" title="应急响应" class="md-nav__link">
+      应急响应
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x6_%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/6x1_%E6%BA%AF%E6%BA%90%E6%A1%88%E4%BE%8B/" title="溯源案例整理" class="md-nav__link">
+      溯源案例整理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x6_%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/6x2_%E6%95%B0%E6%8D%AE%E9%A9%B1%E5%8A%A8%E7%9A%84%E5%A8%81%E8%83%81%E6%A3%80%E6%B5%8B%E5%92%8C%E6%94%BB%E5%87%BB%E6%BA%AF%E6%BA%90_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="数据驱动的威胁检测和攻击溯源—学习笔记" class="md-nav__link">
+      数据驱动的威胁检测和攻击溯源—学习笔记
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x6_%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/6x3_%E6%97%A5%E5%BF%97%E3%80%81%E5%91%8A%E8%AD%A6%E5%92%8C%E4%BA%8B%E4%BB%B6/" title="日志、告警和事件" class="md-nav__link">
+      日志、告警和事件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x6_%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/6x4_%E4%B8%BB%E6%9C%BA%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/" title="[TODO]主机应急响应" class="md-nav__link">
+      [TODO]主机应急响应
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x6_%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/6x5_%E4%BB%8E%E6%B5%81%E9%87%8F%E4%B8%AD%E8%BF%9B%E8%A1%8C%E6%81%B6%E6%84%8FC2%E4%BF%A1%E6%81%AF%E7%9A%84%E6%A3%80%E6%B5%8B/" title="TODO 从流量中检测C2通信" class="md-nav__link">
+      TODO 从流量中检测C2通信
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x6_%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/6x6_%E9%9A%90%E8%94%BD%E9%80%9A%E8%AE%AF%E7%9A%84%E6%A3%80%E6%B5%8B/" title="隐蔽通讯的检测" class="md-nav__link">
+      隐蔽通讯的检测
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x6_%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/6x7_%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90NTA%E7%AE%80%E8%BF%B0/" title="[Doing] 网络流量分析（NTA）简述" class="md-nav__link">
+      [Doing] 网络流量分析（NTA）简述
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      0x7  威胁狩猎
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="0x7  威胁狩猎" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        0x7  威胁狩猎
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x7_%20%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/7x0_README/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x7_%20%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/7x1_%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="威胁狩猎学习笔记" class="md-nav__link">
+      威胁狩猎学习笔记
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x7_%20%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/7x2_%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E%E5%AE%9E%E6%88%98/" title="威胁狩猎实战" class="md-nav__link">
+      威胁狩猎实战
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x7_%20%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/7x3_%E5%85%A8%E6%B5%81%E9%87%8F%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/" title="全流量威胁狩猎" class="md-nav__link">
+      全流量威胁狩猎
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x7_%20%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/7x4_%E5%A8%81%E8%83%81%E6%A3%80%E6%B5%8B%E6%A8%A1%E5%9E%8B/" title="威胁检测模型" class="md-nav__link">
+      威胁检测模型
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x7_%20%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/7x5_%E7%9B%B8%E5%85%B3%E9%A1%B9%E7%9B%AE/" title="威胁狩猎相关项目" class="md-nav__link">
+      威胁狩猎相关项目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x7_%20%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/7x6_%E7%BB%95%E8%BF%87CDN%E6%A3%80%E6%B5%8B%E7%9C%9F%E5%AE%9EIP/" title="TODO 绕过CDN检测真实IP" class="md-nav__link">
+      TODO 绕过CDN检测真实IP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x7_%20%E5%A8%81%E8%83%81%E7%8B%A9%E7%8C%8E/7x7_%E6%94%BB%E5%87%BB%E8%80%85%E6%8F%8F%E7%BB%98/" title="攻击者评估与知识图谱" class="md-nav__link">
+      攻击者评估与知识图谱
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" checked>
+    
+    <label class="md-nav__link" for="nav-10">
+      0x8 业务安全
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="0x8 业务安全" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        0x8 业务安全
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10-1" type="checkbox" id="nav-10-1">
+    
+    <label class="md-nav__link" for="nav-10-1">
+      >>> 业务安全漏洞相关
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label=">>> 业务安全漏洞相关" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        >>> 业务安全漏洞相关
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../%3E%3E%3E%20%E4%B8%9A%E5%8A%A1%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E%E7%9B%B8%E5%85%B3/0x0_%E4%B8%9A%E5%8A%A1%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98/" title="业务安全漏洞挖掘" class="md-nav__link">
+      业务安全漏洞挖掘
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10-2" type="checkbox" id="nav-10-2" checked>
+    
+    <label class="md-nav__link" for="nav-10-2">
+      >>> 反爬研究
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label=">>> 反爬研究" data-md-level="2">
+      <label class="md-nav__title" for="nav-10-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        >>> 反爬研究
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        反爬研究
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="反爬研究" class="md-nav__link md-nav__link--active">
+      反爬研究
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    爬虫技术
+  </a>
+  
+    <nav class="md-nav" aria-label="爬虫技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    常规编写思路
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    代理池
+  </a>
+  
+    <nav class="md-nav" aria-label="代理池">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    概念
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    隧道代理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    如何实现
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    传统反爬技术
+  </a>
+  
+    <nav class="md-nav" aria-label="传统反爬技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-agent" class="md-nav__link">
+    限制User-Agent
+  </a>
+  
+    <nav class="md-nav" aria-label="限制User-Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    对抗
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip" class="md-nav__link">
+    通过IP限制
+  </a>
+  
+    <nav class="md-nav" aria-label="通过IP限制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    对抗
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    验证浏览器客户端
+  </a>
+  
+    <nav class="md-nav" aria-label="验证浏览器客户端">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    对抗
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robotstxt" class="md-nav__link">
+    完善robots.txt来限制
+  </a>
+  
+    <nav class="md-nav" aria-label="完善robots.txt来限制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    对抗
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    访问统计及分析（传统）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    反爬新思路
+  </a>
+  
+    <nav class="md-nav" aria-label="反爬新思路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geetest" class="md-nav__link">
+    来自GEETEST
+  </a>
+  
+    <nav class="md-nav" aria-label="来自GEETEST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    工作量证明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    轨迹模型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    前端加密
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    网络层特征
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    一个反爬业务模型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    流量过滤分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    四层防护逻辑
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    头条反爬研究
+  </a>
+  
+    <nav class="md-nav" aria-label="头条反爬研究">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    头条反爬策略
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    对抗
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    头条反爬总结
+  </a>
+  
+    <nav class="md-nav" aria-label="头条反爬总结">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    案例
+  </a>
+  
+    <nav class="md-nav" aria-label="案例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    巧达科技被查
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hui" class="md-nav__link">
+    hui产公司
+  </a>
+  
+    <nav class="md-nav" aria-label="hui产公司">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idataapi" class="md-nav__link">
+    idataapi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    爬山虎采集器
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      0x9 安全开发
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="0x9 安全开发" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        0x9 安全开发
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x9_%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91/8x1_%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91/" title="安全运营工具开发" class="md-nav__link">
+      安全运营工具开发
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x9_%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91/8x2_2019%E7%9C%8B%E9%9B%AA%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91%E8%80%85%E5%B3%B0%E4%BC%9A/" title="2019看雪安全开发者峰会" class="md-nav__link">
+      2019看雪安全开发者峰会
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0x9_%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91/8x3_%E5%AE%89%E5%85%A8%E5%B7%A5%E5%85%B7%E8%AE%B0%E5%BD%95/" title="安全工具记录" class="md-nav__link">
+      安全工具记录
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      0xA 学习记录
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="0xA 学习记录" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        0xA 学习记录
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0xA_%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Ax0_README/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0xA_%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Ax1_%E8%AE%B0%E5%A5%87%E5%AE%89%E4%BF%A1%E7%9A%84%E4%B8%80%E6%AC%A1%E5%AE%89%E8%BF%90%E9%9D%A2%E8%AF%95/" title="记奇安信的一次安运面试" class="md-nav__link">
+      记奇安信的一次安运面试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0xA_%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Ax2_%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98%E7%9B%AE%E6%95%B4%E7%90%86/" title="安全运营相关面试题目整理" class="md-nav__link">
+      安全运营相关面试题目整理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0xA_%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Ax3_%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%95%BF%E4%BA%AD%E7%A7%91%E6%8A%80%E7%9A%84%E9%9D%A2%E8%AF%95/" title="记一次长亭的安研（课程方向）的面试" class="md-nav__link">
+      记一次长亭的安研（课程方向）的面试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0xA_%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Ax4_%E9%9C%80%E8%A6%81%E7%9C%8B%E7%9A%84%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98/" title="需要看的面试问题" class="md-nav__link">
+      需要看的面试问题
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0xA_%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Ax5_%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%BE%AE%E6%AD%A5%E5%9C%A8%E7%BA%BF%E7%9A%84%E5%88%86%E6%9E%90%E5%B8%88%E9%9D%A2%E8%AF%95/" title="记一次微步在线的分析师面试" class="md-nav__link">
+      记一次微步在线的分析师面试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0xA_%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Ax6_%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%BE%AE%E5%8D%9A%E5%AE%89%E5%85%A8%E7%9A%84%E9%9D%A2%E8%AF%95/" title="记一次微博安全的面试" class="md-nav__link">
+      记一次微博安全的面试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0xA_%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Ax7_%E5%85%B3%E4%BA%8E%E6%96%B9%E6%B3%95%E8%AE%BA%E5%92%8C%E6%8A%80%E6%9C%AF%E7%BB%86%E8%8A%82/" title="关于方法论和技术细节" class="md-nav__link">
+      关于方法论和技术细节
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0xA_%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Ax8_%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E5%95%86%E5%AE%89%E5%85%A8%E5%90%88%E8%A7%84%E6%B2%BB%E7%90%86%E7%9A%84%E9%9D%A2%E8%AF%95/" title="记一次电商安全合规治理的面试" class="md-nav__link">
+      记一次电商安全合规治理的面试
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      0xB 系统与设备
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="0xB 系统与设备" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        0xB 系统与设备
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0xB_%E7%B3%BB%E7%BB%9F%E4%B8%8E%E8%AE%BE%E5%A4%87/Bx0_README/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0xB_%E7%B3%BB%E7%BB%9F%E4%B8%8E%E8%AE%BE%E5%A4%87/Bx1_%E5%AE%89%E5%85%A8%E7%B3%BB%E7%BB%9F/" title="安全系统" class="md-nav__link">
+      安全系统
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      0xC 产品与设计
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="0xC 产品与设计" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        0xC 产品与设计
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0xC_%E4%BA%A7%E5%93%81%E4%B8%8E%E8%AE%BE%E8%AE%A1/Cx0_README/" title="README" class="md-nav__link">
+      README
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0xC_%E4%BA%A7%E5%93%81%E4%B8%8E%E8%AE%BE%E8%AE%A1/Cx1_%E4%BA%A7%E5%93%81%E6%A6%82%E5%BF%B5/" title="产品概念" class="md-nav__link">
+      产品概念
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0xC_%E4%BA%A7%E5%93%81%E4%B8%8E%E8%AE%BE%E8%AE%A1/Cx2_%E5%A6%82%E4%BD%95%E5%B0%86%E4%BA%A7%E5%93%81%E6%80%9D%E8%B7%AF%E2%80%9C%E6%8F%90%E7%8E%B0%E2%80%9D/" title="如何将产品思路“提现”？" class="md-nav__link">
+      如何将产品思路“提现”？
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      0xE 学术研究
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="0xE 学术研究" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        0xE 学术研究
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../0xE_%E5%AD%A6%E6%9C%AF%E7%A0%94%E7%A9%B6/Ex1_%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%9B%B8%E5%85%B3%E5%AD%A6%E6%9C%AF%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/" title="[Doing] 信息安全相关学术资料整理" class="md-nav__link">
+      [Doing] 信息安全相关学术资料整理
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+    
+    <label class="md-nav__link" for="nav-16">
+      About
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="About" data-md-level="1">
+      <label class="md-nav__title" for="nav-16">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/about/" title="关于文档( •̀ ω •́ )y" class="md-nav__link">
+      关于文档( •̀ ω •́ )y
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../about/releaseNotes/" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+    
+    <label class="md-nav__link" for="nav-17">
+      Refer
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Refer" data-md-level="1">
+      <label class="md-nav__title" for="nav-17">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Refer
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../refer/%E4%B8%93%E4%B8%9A%E5%90%8D%E8%AF%8D/" title="名词解释" class="md-nav__link">
+      名词解释
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    爬虫技术
+  </a>
+  
+    <nav class="md-nav" aria-label="爬虫技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    常规编写思路
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    代理池
+  </a>
+  
+    <nav class="md-nav" aria-label="代理池">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    概念
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    隧道代理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    如何实现
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    传统反爬技术
+  </a>
+  
+    <nav class="md-nav" aria-label="传统反爬技术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-agent" class="md-nav__link">
+    限制User-Agent
+  </a>
+  
+    <nav class="md-nav" aria-label="限制User-Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    对抗
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip" class="md-nav__link">
+    通过IP限制
+  </a>
+  
+    <nav class="md-nav" aria-label="通过IP限制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    对抗
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    验证浏览器客户端
+  </a>
+  
+    <nav class="md-nav" aria-label="验证浏览器客户端">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    对抗
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#robotstxt" class="md-nav__link">
+    完善robots.txt来限制
+  </a>
+  
+    <nav class="md-nav" aria-label="完善robots.txt来限制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    对抗
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    访问统计及分析（传统）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    反爬新思路
+  </a>
+  
+    <nav class="md-nav" aria-label="反爬新思路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geetest" class="md-nav__link">
+    来自GEETEST
+  </a>
+  
+    <nav class="md-nav" aria-label="来自GEETEST">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    工作量证明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    轨迹模型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    前端加密
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    网络层特征
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    一个反爬业务模型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    流量过滤分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    四层防护逻辑
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    头条反爬研究
+  </a>
+  
+    <nav class="md-nav" aria-label="头条反爬研究">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    头条反爬策略
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    对抗
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    头条反爬总结
+  </a>
+  
+    <nav class="md-nav" aria-label="头条反爬总结">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    参考
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    案例
+  </a>
+  
+    <nav class="md-nav" aria-label="案例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    巧达科技被查
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hui" class="md-nav__link">
+    hui产公司
+  </a>
+  
+    <nav class="md-nav" aria-label="hui产公司">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idataapi" class="md-nav__link">
+    idataapi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    爬山虎采集器
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="_1">反爬研究</h1>
+<p>在和A师傅的交流过程中，明确了反爬技术是很重要的，对于头条产品来说主要考虑是视频版权。对于电商的黑产，主要是羊毛党比较多。因此在这里快速学习一下反爬技术。</p>
+<h2 id="_2">爬虫技术</h2>
+<h3 id="_3">常规编写思路</h3>
+<ul>
+<li>
+<p>分析页面请求格式</p>
+</li>
+<li>
+<p>创建合适的http请求，验证请求的准确性</p>
+</li>
+<li>
+<p>编写脚本，批量发送http请求，获取数据</p>
+</li>
+</ul>
+<h3 id="_4">代理池</h3>
+<h4 id="_5">概念</h4>
+<blockquote>
+<p>为了保证代理的有效性，我们往往可能需要维护一个代理池。这个代理池里面存着非常多的代理，同时代理池还会定时爬取代理来补充到代理池中，同时还会不断检测其中代理的有效性。当然还有一个很重要的功能就是提供一个接口，这个接口可以随机返回代理池中的一个有效代理
+公众号文章：<a href="https://mp.weixin.qq.com/s/ZzCQ9UgUhIwfDGO9QTwuFg">Link</a></p>
+</blockquote>
+<h4 id="_6">隧道代理</h4>
+<blockquote>
+<p>隧道代理无须切换 IP，将 IP 切换的事情交给隧道来做，程序只需要对接一个隧道代理的固定地址即可, e.g. xxproxy:7777
+平台在云端维护一个全局 IP 池 供短效代理 IP 产品使用，池中的 IP 会不间断更新，以保证 IP 池中有足够多的 IP 供用户使用
+隧道代理 基于 HTTP 协议，支持 HTTP/HTTPS 协议的数据接入。</p>
+</blockquote>
+<h4 id="_7">如何实现</h4>
+<p>使用Squid代理服务器实现一个隧道代理的代理池。</p>
+<p><img alt="" src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200321194138.png" />
+图：Squid工作机制
+客户机请求web服务，通过Squid代理服务器，代理服务器检查web页面是否在缓存中。如有，直接返回；如果没有，则让Squid代理服务器去发起请求，获得缓存页面，再返回给客户机。
+使用Squid的cache_peer功能，可以实现二次代理转发。因此，配置在Squid代理服务器的二级代理可以是批量的，不断变化的，而Squid服务器本身只留出固定的端口与客户机进行交互，从而实现一个简易的代理池的功能。
+参考文章：<a href="https://mp.weixin.qq.com/s/ZzCQ9UgUhIwfDGO9QTwuFg">Link</a></p>
+<h2 id="_8">传统反爬技术</h2>
+<h3 id="user-agent">限制User-Agent</h3>
+<p>建立User-Agent白名单，对其进行检查。</p>
+<h4 id="_9">对抗</h4>
+<p>设置user-agent，可以从一系列的User-Agent列表里里随机挑出一个符合标准的使用</p>
+<h3 id="ip">通过IP限制</h3>
+<p>监控单个IP的访问情况，结合第三方情报平台，建立IP黑名单。</p>
+<h4 id="_10">对抗</h4>
+<p>使用IP代理池，参见“爬虫技术”模块。</p>
+<h3 id="_11">验证浏览器客户端</h3>
+<p>使用JS脚本可以要求浏览器（客户端）进行计算等进行验证，用以识别真实浏览器和爬虫脚本。</p>
+<h4 id="_12">对抗</h4>
+<p>使用<strong>模拟浏览器</strong>的Python包，例如PhantomJS，本身适用于自动化测试，但可以在对效率要求不是非常高的情况下使用于反反爬虫。</p>
+<blockquote>
+<p>_PhantomJS_是一个无界面的,可脚本编程的WebKit浏览器引擎</p>
+</blockquote>
+<h3 id="robotstxt">完善robots.txt来限制</h3>
+<p>在robots.txt中更新活跃程度高的恶意爬虫，也就是黑名单。</p>
+<h4 id="_13">对抗</h4>
+<p>使用这些恶性爬虫的时候，更改请求头参数，伪装自身。</p>
+<h3 id="_14">访问统计及分析（传统）</h3>
+<ul>
+<li>后台对访问进行统计，如果单个IP访问超过阈值，予以封锁</li>
+<li>
+<p>效果还行</p>
+</li>
+<li>
+<p>容易误伤</p>
+</li>
+<li>
+<p>有较多的对抗手段（IP代理池）</p>
+</li>
+<li>
+<p>后台对访问进行统计，如果单个session访问超过阈值，予以封锁</p>
+</li>
+<li>
+<p>效果差</p>
+</li>
+<li>
+<p>后台对访问进行统计，如果单个userAgent访问超过阈值，予以封锁</p>
+</li>
+<li>
+<p>效果好</p>
+</li>
+<li>
+<p>误伤严重</p>
+</li>
+<li>
+<p>对抗：爬虫脚本可以随机浏览器类型</p>
+</li>
+<li>
+<p>以上三种的组合</p>
+</li>
+<li>
+<p>能力变大，误伤率下降，但只能防部分低级爬虫</p>
+</li>
+<li>
+<p>参考：<a href="https://mp.weixin.qq.com/s/ZzCQ9UgUhIwfDGO9QTwuFg">Link</a></p>
+</li>
+</ul>
+<h2 id="_15">反爬新思路</h2>
+<h3 id="geetest">来自GEETEST</h3>
+<h4 id="_16">工作量证明</h4>
+<p>反爬虫实际上是一场<strong>成本</strong>拉锯战。
+如果我们能要求某个客户端的证明其工作量，要求完成某个特定计算，比如生成设备指纹，要达到某个工作量才能下发指纹。
+可行的方法，比如是增加前端JS加密混淆，增加破解成本，也增加了中间人破解成本</p>
+<h4 id="_17">轨迹模型</h4>
+<p>使用通过智能技术进行<strong>人机识别</strong>。 TODO
+<img alt="" src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200321194203.png" /></p>
+<h4 id="_18">前端加密</h4>
+<p>增加前端JS加密混淆，增加破解成本，也增加了中间人破解成本。这个和工作量证明其实是泛化的关系。</p>
+<h4 id="_19">网络层特征</h4>
+<p>SSL + TCP， 通过更底层的协议分析，提高数据采集的隐蔽性，从信息差上获取赢面。</p>
+<h4 id="_20">一个反爬业务模型</h4>
+<ul>
+<li>反爬需要分析出异常的流量，并对异常流量进行分类处理</li>
+</ul>
+<p><img alt="" src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200321194213.png" /></p>
+<ul>
+<li>恶意爬虫的行为</li>
+<li>
+<p>数据爬取</p>
+</li>
+<li>
+<p>接口盗用</p>
+</li>
+<li>
+<p>薅羊毛</p>
+</li>
+<li>
+<p>未经授权扫描器</p>
+</li>
+<li>
+<p>商业竞争</p>
+</li>
+<li>
+<p>识别的方法</p>
+</li>
+<li>
+<p>脚本识别</p>
+</li>
+<li>
+<p>模拟器识别</p>
+</li>
+<li>
+<p>数据策略</p>
+</li>
+<li>
+<p>AI模型</p>
+</li>
+<li>
+<p>接口防护</p>
+</li>
+<li>
+<p>恶意设备</p>
+</li>
+<li>
+<p>恶意访问者</p>
+</li>
+<li>
+<p>防护的手段</p>
+</li>
+<li>
+<p>验证码</p>
+</li>
+<li>
+<p>Block（封禁）</p>
+</li>
+<li>
+<p>Feed Fake Data（假数据）</p>
+</li>
+<li>
+<p>Filter Traffic（监控模式）</p>
+</li>
+<li>
+<p>Custom Action（自定义的其它手段）</p>
+</li>
+</ul>
+<h4 id="_21">流量过滤分析</h4>
+<p><img alt="" src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200321194236.png" /></p>
+<h4 id="_22">四层防护逻辑</h4>
+<ul>
+<li>设备环境监测</li>
+<li>
+<p>数据串改</p>
+</li>
+<li>
+<p>设备指纹</p>
+</li>
+<li>
+<p>混淆加密</p>
+</li>
+<li>
+<p>特性测试</p>
+</li>
+<li>
+<p>特性采集</p>
+</li>
+<li>
+<p>工作量证明</p>
+</li>
+<li>
+<p>建立海量风险库</p>
+</li>
+<li>
+<p>IP打分体系</p>
+</li>
+<li>
+<p>黑产IP</p>
+</li>
+<li>
+<p>爬虫IP</p>
+</li>
+<li>
+<p>团伙IP</p>
+</li>
+<li>
+<p>云服务器IP</p>
+</li>
+<li>
+<p>设备指纹风险</p>
+</li>
+<li>
+<p>网络风险探测</p>
+</li>
+<li>
+<p>TCP特征</p>
+</li>
+<li>
+<p>HTTP特征</p>
+</li>
+<li>
+<p>大数据统计</p>
+</li>
+<li>
+<p>人工智能模型</p>
+</li>
+<li>
+<p>鼠标轨迹CNN模型</p>
+</li>
+<li>
+<p>流量分析（行为分析）</p>
+</li>
+</ul>
+<h2 id="_23">头条反爬研究</h2>
+<h3 id="_24">头条反爬策略</h3>
+<ul>
+<li>
+<p>封IP —— 使用代理池</p>
+</li>
+<li>
+<p>网页文章链接（关键内容），通过另外的url请求获取，同时进行加密处理</p>
+</li>
+<li>
+<p>对网页JS函数进行加密处理</p>
+</li>
+<li>
+<p>视频通过videoid获取网页播放链接，经过三次加密处理才能获取最终url</p>
+</li>
+<li>
+<p>翻页请求失败率高，降低爬虫获取信息的速度</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>使用自定制的JS加密算法 —— 添加断点进行调试（分析其算法机制）</li>
+</ul>
+<h3 id="_25">对抗</h3>
+<ul>
+<li>
+<p>首先找<strong>信息列表</strong>和<strong>下拉方式</strong>的URL规律，分析获取<strong>单页面信息</strong>的规律</p>
+</li>
+<li>
+<p>能读懂前端代码</p>
+</li>
+<li>
+<p>多从网络上找新的思路</p>
+</li>
+<li>
+<p>添加断点进行调试，分析其算法机制（静态分析、动态调试、步步跟进）</p>
+</li>
+</ul>
+<h3 id="_26">头条反爬总结</h3>
+<h4 id="_27">参考</h4>
+<ul>
+<li>《今日头条反反爬思路总结》，分析得很详细，很值得一看：<a href="https://www.cnblogs.com/dmcs95/p/11667817.html">Link</a></li>
+</ul>
+<h2 id="_28">案例</h2>
+<h3 id="_29">巧达科技被查</h3>
+<p>公司客户信息被抓取，并且某个接口访问量巨大，后调查为一个数据公司的某个程序员将爬虫的线程数调大，影响了正常服务</p>
+<h2 id="hui">hui产公司</h2>
+<h3 id="idataapi">idataapi</h3>
+<p><a href="https://www.idataapi.cn/product/detail/94">https://www.idataapi.cn/product/detail/94</a></p>
+<h3 id="_30">爬山虎采集器</h3>
+<p>可进行头条数据采集的一个爬虫软件
+<a href="http://www.51pashanhu.com/">http://www.51pashanhu.com/</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../%3E%3E%3E%20%E4%B8%9A%E5%8A%A1%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E%E7%9B%B8%E5%85%B3/0x0_%E4%B8%9A%E5%8A%A1%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98/" title="业务安全漏洞挖掘" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                业务安全漏洞挖掘
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../../0x9_%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91/8x1_%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5%E5%B7%A5%E5%85%B7%E5%BC%80%E5%8F%91/" title="安全运营工具开发" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                安全运营工具开发
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.92ffa368.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.5123e3d4.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
