@@ -10,6 +10,7 @@
 
 - 方案1: 从主机信息采集出发，进行基于ATT&CK矩阵的入侵检测
 - 方案2: 从网络层面、主机层和Windows服务器出发，进行入侵溯源
+- 方案3: 基于**Sysmon**的企业级威胁检测与响应闭环[3]
 
 
 
@@ -152,14 +153,14 @@ Linux系统主要作为服务器和IoT设备的主要操作系统, 因为其应�
 
 检测一些通用的攻击, 网络扫描的痕迹, 设置网络监听, 检查远程漏洞利用等
 
-![](https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200410133154.png)
+<img src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200410133154.png" style="zoom: 50%;" />
 
 
 #### 清理痕迹
 
 > 在目前的安全状态下，安全法规定日志需保存6个月以上，且SIEM针对安全信息和事件的管理，也才采集数据，在绕过检测采集以及心跳线检测，无法规避
 
-![](https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200410133338.png)
+<img src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200410133338.png" style="zoom: 67%;" />
 
 #### HOOK技术
 
@@ -183,6 +184,8 @@ Fig. HOOK通用技术[1]
 ![](https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200410133938.png)
 
 Fig. 入侵检测相应规则
+
+
 
 ### 小结
 
@@ -226,3 +229,5 @@ ATT&CK矩阵下， 与普通的评估方法区别，以及相互对应的是哪�
 [1] ATT&CK矩阵Linux系统安全实践, https://www.freebuf.com/articles/es/231784.html
 
 \[2] 安全运营之攻击溯源, [bt0sea](https://www.4hou.com/member/dJY9), https://www.4hou.com/posts/x9KP
+
+\[3] 基于**Sysmon**的企业级威胁检测与响应闭环，樊兴华（微步在线首席分析师），2019CTIC分享的议题
