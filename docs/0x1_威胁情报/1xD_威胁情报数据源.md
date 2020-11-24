@@ -4,6 +4,17 @@
 
 公开不等于无版权，注意哦～
 
+-   CIRCL - https://www.circl.lu/
+-   Malwr.com - [https://malwr.com](https://malwr.com/)
+-   ipinfo - [https://www.ipinfo.io](https://www.ipinfo.io/)
+-   Robtex - [https://www.robtex.com](https://www.robtex.com/)
+-   CleanMX - [https://www.cleanmx.com](https://www.cleanmx.com/)
+-   VirusShare - [https://www.virusshare.com](https://www.virusshare.com/)
+-   Sinica - [https://www.sinica.edu.tw](https://www.sinica.edu.tw/)
+-   Native - ThreatMiner also periodically carries out its own DNS enrichment via native applications.
+
+-   Loki https://github.com/Neo23x0/Loki
+
 -   Maltiverse https://maltiverse.com/dashboards/newioc
 -   InQuest Labs IOC DB https://labs.inquest.net/iocdb
 
