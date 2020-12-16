@@ -2,8 +2,6 @@
 
 本篇整理一些安全相关的软硬件系统。
 
-
-
 ## IDS
 
 IDS（Intrusion detection system），入侵检测设备
@@ -53,7 +51,29 @@ Network Traffic Analysis，常指网络流量分析产品，它将网络通信�
 
 
 
+## 堡垒机/跳板机（Jump Server）
+
+跳板机，国内也称堡垒机，也叫做运维安全审计系统，“核心功能是4A”[2]：
+
+-   身份验证 Authentication
+
+-   账号管理 Account
+
+-   授权控制 Authorization
+
+-   安全审计 Audit
+
+"简单总结一句话：堡垒机是用来控制哪些人可以登录哪些资产（事先防范和事中控制），以及录像记录登录资产后做了什么事情（事后溯源）。"[2]
+
+比较出名的是开源堡垒机软件：[jumpserver](https://github.com/jumpserver/jumpserver)
+
+PS. 如果必须区分跳板机和堡垒机的话，可以理解为堡垒机是跳板机的加强版。有趣的一点是，堡垒机这个概念据说是国内独有，至于为什么国内独有，可能是国内删库跑路情况比较多？（逃....）
+
+
+
 ## References
 
 [1] 网络层绕过IDS/IPS的一些探索, lake2（腾讯安全应急响应中心），https://mp.weixin.qq.com/s/QJeW7K-KThYHggWtJ-Fh3w
+
+\[2]堡垒机是干什么的？(知乎提问的回答)，maninhill，https://www.zhihu.com/question/21036511/answer/918763192
 
