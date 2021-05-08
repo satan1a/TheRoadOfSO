@@ -13,3 +13,8 @@ Use Travis for integration and deployment.
 Updated theme's color, changed the logo and favicon.
 
 Chinese search is now supported.
+
+
+## 8/5/2021
+
+Add CNAME, now using `wiki.y1ng.org` as the domain of this site.
