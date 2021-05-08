@@ -101,7 +101,7 @@ Telegram群组中“接码”交流的群组众多，其中卡商、平台都会
 
 图：收卡信息
 
-<img src="/Users/satan1a/Library/Application Support/typora-user-images/image-20210301150943348.png" alt="image-20210301150943348" style="zoom:33%;" />
+[TODO]
 
 图：私人号声称的质量较高
 
