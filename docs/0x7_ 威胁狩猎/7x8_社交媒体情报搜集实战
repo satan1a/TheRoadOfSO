@@ -1,0 +1,125 @@
+# 社交媒体情报搜集实战
+
+本篇是对[TryHackMe：KaffeeSec-SoMeSINT](https://www.secjuice.com/try-hack-me-kaffeesec-somesint/)的学习笔记。该文主要提供了一个完整的，通过社交媒体数据进行情报搜集、分析和取证的实例。
+
+## 目标
+
+> 1. Investigate and analyze the person of interest to uncover facts and information.
+> 2. Learn to use OSINT tools and techniques such as Google Dorking, website archiving, social media information gathering/enumeration & Analysis.
+> 3. Apply the skills that you have learned throughout this write-up while attempting CTFs and while addressing real-world investigations related to social media.
+
+## 素材
+
+> You are Aleks Juulut, a private eye based out of Greenland. You don't usually work digitally, but have recently discovered OSINT techniques to make that aspect of your job much easier. You were recently hired by a mysterious person under the moniker "H" to investigate a suspected cheater, named Thomas Straussman. After a brief phone-call with his wife, Francesca Hodgerint, you've learned that he's been acting suspicious lately, but she isn't sure exactly what he could be doing wrong. She wants you to investigate him and report back anything you find. Unfortunately, you're out of the country on a family emergency and cannot get back to Greenland to meet the deadline of the investigation, so you're going to have to do all of it digitally.
+
+
+
+## 挑战任务
+
+### Task 1
+
+>谁雇用了您，您正在调查谁？
+
+- 雇主：“H”
+
+- 调查目标：“Thomas Straussman”
+  - 妻子：“Francesca Hodgerint”
+
+### Task 2
+
+> 在最初的调查中，我们发现我们的目标在两个不同的社交媒体平台上都被**冠以“ tstraussman”**的名称，**这些**平台不久将被揭露。
+
+在Google中通过关键词搜索，发现该调查目标（后称“目标”）注册了Twitter和Reddit。
+
+<img src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/image-20210518191317783.png" alt="image-20210518191317783" style="zoom: 67%;" />
+
+以下是[目标在twitter上的个人信息页](https://twitter.com/TStraussman)。注意其中的昵称、账户号以及定位，这三者帮助我们确定目标。个人签名、所发Twitter的内容、浏览点赞的记录，可以帮助我们确定目标的生活兴趣、个人性格等。
+
+<img src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/image-20210518191625107.png" alt="image-20210518191625107" style="zoom: 67%;" />
+
+以下是[目标在Reddit上的个人信息页](https://www.reddit.com/user/Tstraussman/comments/kh1pzg/big_thank_you/)：
+
+![image-20210518192307703](https://image-host-toky.oss-cn-shanghai.aliyuncs.com/image-20210518192307703.png)
+
+#### Q1
+
+> Q1: **托马斯最喜欢的假期是什么？**
+>
+> **What is Thomas's favorite holiday?**
+
+从目标在twitter的签名，可以推测目标最喜欢圣诞节。
+
+![image-20210518192044840](https://image-host-toky.oss-cn-shanghai.aliyuncs.com/image-20210518192044840.png)
+
+**A1: Christmas**
+
+
+
+#### Q2
+
+> Q2: **托马斯的生日是几岁？（**格式为MM-DD-YYYY **）**
+>
+> **What is Thomas's birth date? (**Format is MM-DD-YYYY**)**
+
+从社交媒体上的信息来看，没有直接显示生日的信息。尝试其他角度。
+
+- 翻阅目标发布的twitter内容、Likes和回复
+  - 内容未发现直接的信息
+  - Likes中发现[其妻子的Twitter](https://twitter.com/FHodgelink)
+    - 翻阅目标妻子的Twitter，未发现直接信息
+  - 回复中未发现直接的信息
+- 在目标的Reddit上搜集信息
+
+发现目标在reddit上发的帖子，透露目标4个月前表示其“30岁”生日，因此推测其出生年份为：`1991`年。
+
+<img src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/image-20210518194205937.png" alt="image-20210518194205937"  />
+
+鼠标悬停在帖子发布时间上，可以显示详细时间：
+
+![image-20210518194623363](https://image-host-toky.oss-cn-shanghai.aliyuncs.com/image-20210518194623363.png)
+
+帖子发布时间为2020年，12月21日。因此推翻直接1991年生日的推测，根据周岁计算，目标生日为：`12-21-1990`。
+
+但要特别注意的是，Reddit显示的地区时间是中国标准时间，我们应该根据目标所在地进行时间调整。
+
+目标所在地为：Nuuk, Greenland，使用格陵兰岛西部夏令时间（Western Greenland Summer Time (WGST)），比北京时间落后10小时，因此，其帖子发布时间为格陵兰岛西部夏令时间：`12-20-2021, 18:32:57`, 根据周岁计算，其生日为格陵兰岛西部夏令时间的`12-20-1990`。
+
+这个日期也与Reddit的cake day相吻合：
+
+![image-20210518200508271](https://image-host-toky.oss-cn-shanghai.aliyuncs.com/image-20210518200508271.png)
+
+**A2: 12-20-1990 WGST **
+
+
+
+#### Q3
+
+> **托马斯未婚妻的Twitter账号是什么？**
+>
+> **What is Thomas' fiancée’s Twitter handle?**
+
+A2中已经搜集。
+
+
+
+**A3: Francesca Hodgelink，@FHodgelink，[Twitter Link](https://twitter.com/FHodgelink)**
+
+
+
+#### Q4
+
+> 托马斯的背景图片是什么？
+>
+> **What is Thomas' background picture of?**
+
+结合twitter的签名、和图片造型，可得其出：Buddha（佛）
+
+
+
+**A4: Buddha**
+
+
+
+### Task 3
+
+ // TODO
