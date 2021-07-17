@@ -139,7 +139,7 @@ Before 黑产情报：`https://007.qq.com/before-insight.html?ADTAG=index.head`
 
 
 
-## [TODO]数美科技
+## 数美科技
 
 数美黑产研究院官网：`https://www.ishumei.com/research/research.html`
 
