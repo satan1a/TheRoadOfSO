@@ -256,7 +256,7 @@ GET _search
 
 // TODO
 
--   基于DNS数据的动态IP、恶意域名检出
+-   基于DNS数据的动态IP、恶意
 
 
 
