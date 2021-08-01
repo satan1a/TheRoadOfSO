@@ -6,7 +6,7 @@
 
 借用Tr0y师傅系列文章[1]的大纲：
 
-![img](https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20201104095104408.png!blog)
+<img src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20201104095104408.png!blog" alt="img" style="zoom: 33%;" />
 
 图：DNS安全大纲
 
