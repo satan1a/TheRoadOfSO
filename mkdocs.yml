@@ -18,3 +18,9 @@ extra:
 
 repo_url: https://github.com/satan1a/TheRoadOfSO
 repo_name: Toky/TheRoadofSO
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets

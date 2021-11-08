@@ -80,7 +80,7 @@ DNS的缓存分布：
 ### DNS报文机构
 
 ```text
-|QID|问题区|应答区|权威区|附加区|
+DNS报文：|QID|问题区|应答区|权威区|附加区|
 ```
 
 // TODO 待补充，参考：https://zhuanlan.zhihu.com/p/92899876
