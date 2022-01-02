@@ -184,7 +184,7 @@
 -   https://www.packetmail.net/iprep_ramnode.txt
 -   https://www.trustedsec.com/banlist.txt
 -   https://www.turris.cz/greylist-data/greylist-latest.csv
--   [https://zeustracker.abuse.ch](https://zeustracker.abuse.ch/)
+-   [https://zeustracker.abuse.ch
 
 
 
@@ -199,16 +199,11 @@
 -   VirusShare - [https://www.virusshare.com](https://www.virusshare.com/)
 -   Sinica - [https://www.sinica.edu.tw](https://www.sinica.edu.tw/)
 -   Native - ThreatMiner also periodically carries out its own DNS enrichment via native applications.
-
 -   Loki https://github.com/Neo23x0/Loki
-
 -   Maltiverse https://maltiverse.com/dashboards/newioc
 -   InQuest Labs IOC DB https://labs.inquest.net/iocdb
-
 -   Abuse.ch http://abuse.ch/
-
 -   Anomali STAXX https://www.anomali.com/community/staxx
-
 -   Autoshun https://www.autoshun.org
 -   Bambenek https://www.bambenekconsulting.com/
 -   Block List Project https://blocklist.site/
@@ -240,6 +235,7 @@
 -   Trustwave (SpiderLabs Blog) https://www.trustwave.com
 -   US DHS - Automated Indicator Sharing https://www.cisa.gov/automated-indicator-sharing-ais
 -   Virus Total https://www.virustotal.com
+-   List of Resource Links from Open-Source Intelligence Summit 2021 https://www.sans.org/blog/list-of-resource-links-from-open-source-intelligence-summit-2021/
 
 
 
@@ -247,7 +243,7 @@
 
 <img src="https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200815211931.png" style="zoom:50%;" />
 
-
+图：威胁情报分类
 
 
 
