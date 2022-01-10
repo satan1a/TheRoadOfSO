@@ -1,4 +1,4 @@
-# Enabling Efficient Cyber Threat Hunting With Cyber Threat Intelligence
+# 论文日读：Enabling Efficient Cyber Threat Hunting With Cyber Threat Intelligence
 
 ## 概要
 
