@@ -183,7 +183,7 @@ Fig. HOOK通用技术[1]
 
 ![](https://image-host-toky.oss-cn-shanghai.aliyuncs.com/20200410133938.png)
 
-Fig. 入侵检测相应规则
+图：入侵检测相应规则
 
 
 
@@ -193,14 +193,14 @@ MITRE ATT&CK矩阵 从某种程度上来讲, 就是安全攻防时的一种兵�
 
 对于广义的SOC建设来说, 威胁狩猎是一个方向, 入侵检测和应急响应也是一个方向. ATT&CK矩阵带给SOC建设的作用就是, 将一种经验化的, 事后型(被动的)建设方案, 逐渐转变为一个工程化, 带有模拟和预测性质的, 甚至以攻为守(参考本文档章节下的《威胁狩猎》一文)的体系。
 
-
+1
 
 
 ## 1.2 方案二详解
 
 ### 总体架构
 
-![安全运营之攻击溯源](https://img.4hou.com/uploads/ueditor/php/upload/image/20201103/1604340947425759.png)
+![img](https://image-host-toky.oss-cn-shanghai.aliyuncs.com/1604340947425759.png)
 
 图：基于ATT&CK矩阵的攻击链分析解决方案[2]
 
