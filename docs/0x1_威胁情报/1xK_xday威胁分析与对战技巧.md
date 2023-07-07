@@ -12,8 +12,12 @@
 - 供应链攻击流程
   - msbuild注入
   - 感染后，会进行目标监听，判断高价值目标
+  
 - 谷歌整理的供应链攻击流程分析图
   - developer-source-build-package-dependency-use
+
+
+
 
 ### 关于APT29
 

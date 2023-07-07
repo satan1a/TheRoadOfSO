@@ -46,3 +46,4 @@
 | top95%_family_distr | 命中Top95% 的IOC的家族分布均衡性         | `Top95%_family_distr=TOP95%命中的 IOC中TOP5家族的个数/Hit_top95%_IOC_num` | 任意非0值表示可能存在一定程度的误报 | 白名单包括：公共DNS服务、Alexa/SecRank Top域名等             |
 | top95%_servity      | 命中 Top95% IOC 的风险等级分布           |                                                              | 此项无标准参考值，根据实际情况评估  | 风险等级分布可以看出命中 IOC 的严重程度分布情况。对 IOC 是否适用本网络有个大致的评估。 |
 | top95%_overlay      | 命中Top95% IOC的不同供应商的重合度       | 更新频率；每日更新数量                                       | 此项无标准参考值，根据实际情况评估  |                                                              |
+
