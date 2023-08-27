@@ -1,0 +1,590 @@
+{
+    "version": "0.40",
+    "network": "127.0.0.1/32",
+    "network_build": "localhost",
+    "hostname": "sensor01",
+    "use_logq": true,
+    "storage": "",
+    "cert_name": "unknown",
+    "exclusions": ["1.1.1.1"],
+    "syn_dev": "any",
+    "hosts": [
+        {
+            "ip": "0.0.0.0",
+            "handlers": [
+                {
+                    "handler": "amqp",
+                    "port": 5672,
+                    "params": {
+                        "accounts": [
+                            "guest:guest"
+                        ],
+                        "copyright": "Copyright (C) 2007-2016 Pivotal Software, Inc.",
+                        "host": "rabbit@rabbitmq-0001",
+                        "platform": "Erlang/OTP",
+                        "product_name": "RabbitMQ",
+                        "version": "3.6.6"
+                    }
+                },
+                {
+                    "handler": "bacnet",
+                    "port": 47808,
+                    "params": {
+                        "description": "For bacnet stack",
+                        "device_id": 1234,
+                        "firmware_ver": "0.9.1",
+                        "location": "SE2-315",
+                        "model_name": "Bacnet Device",
+                        "object_name": "Bacnet Device",
+                        "software_ver": "1.0",
+                        "vender_id": 260,
+                        "vender_name": "BACnet Stack at SourceForge"
+                    }
+                },
+                {
+                    "handler": "coap",
+                    "port": 5683,
+                    "params": {
+                        "config_file": "coap.json"
+                    }
+                },
+                {
+                    "handler": "dcerpc",
+                    "port": 135,
+                    "params": {
+                        "accounts": [
+                            "administrator:123456"
+                        ],
+                        "domain_name": "DESKTOP-Q1Test"
+                    }
+                },
+                {
+                    "handler": "dht",
+                    "port": 6881
+                },
+                {
+                    "handler": "eip",
+                    "port": 44818,
+                    "params": {
+                        "ip": "192.168.1.11",
+                        "product_name": "1766-L32BXBA C/21.02"
+                    }
+                },
+                {
+                    "handler": "elasticsearch",
+                    "port": 9200
+                },
+                {
+                    "handler": "eos",
+                    "port": 8888,
+                    "params": {
+                        "config_file": "eos.json",
+                        "server_version": "WebSocket++/0.7.0"
+                    }
+                },
+                {
+                    "handler": "ethereum",
+                    "port": 8545,
+                    "params": {
+                        "config_file": "ethereum.json",
+                        "ethereum_version": "Geth/v1.9.18-stable-f5382591/linux-amd64/go1.14.6",
+                        "server_version": ""
+                    }
+                },
+                {
+                    "handler": "ftp",
+                    "port": 21,
+                    "params": {
+                        "accounts": [
+                            "ftp:123456"
+                        ],
+                        "ssl": false,
+                        "welcome_message": "Welcome to the FTP Server"
+                    }
+                },
+                {
+                    "handler": "http",
+                    "port": 80,
+                    "params": {
+                        "body": "It works.",
+                        "fs_path": "apachefs",
+                        "headers": [],
+                        "server_version": "Apache",
+                        "ssl": false
+                    }
+                },
+                {
+                    "handler": "icap",
+                    "port": 1344,
+                    "params": {
+                        "headers": [
+                            "ISTag: \"GreasySpoon-1.0.8-01\""
+                        ],
+                        "server": "GreasySpoon service version 1.0.8-01"
+                    }
+                },
+                {
+                    "handler": "iec104",
+                    "port": 2404
+                },
+                {
+                    "handler": "imap",
+                    "port": 143,
+                    "params": {
+                        "accounts": [
+                            "admin:123456",
+                            "guest:guest"
+                        ],
+                        "allow_insecure_auth": false,
+                        "server": "Dovecot",
+                        "ssl": false
+                    }
+                },
+                {
+                    "handler": "ldap",
+                    "port": 389,
+                    "params": {
+                        "attrs": {
+                            "configurationNamingContext": [
+                                "CN=Configuration,DC=server,DC=local"
+                            ],
+                            "currentTime": [
+                                "20220121031412.0Z"
+                            ],
+                            "defaultNamingContext": [
+                                "DC=server,DC=local"
+                            ],
+                            "dnsHostName": [
+                                "server.local"
+                            ],
+                            "domainControllerFunctionality": [
+                                "7"
+                            ],
+                            "domainFunctionality": [
+                                "3"
+                            ],
+                            "dsServiceName": [
+                                "CN=NTDS Settings,CN=Servers,CN=Sites,CN=Configuration,DC=server,DC=local"
+                            ],
+                            "forestFunctionality": [
+                                "2"
+                            ],
+                            "highestCommittedUSN": [
+                                "14168611"
+                            ],
+                            "isGlobalCatalogReady": [
+                                "TRUE"
+                            ],
+                            "isSynchronized": [
+                                "TRUE"
+                            ],
+                            "ldapServiceName": [
+                                "SERVER.LOCAL"
+                            ],
+                            "namingContexts": [
+                                "DC=server,DC=local",
+                                "CN=Configuration,DC=server,DC=local",
+                                "CN=Schema,CN=Configuration,DC=server,DC=local",
+                                "DC=DomainDnsZones,DC=server,DC=local",
+                                "DC=ForestDnsZones,DC=server,DC=local"
+                            ],
+                            "rootDomainNamingContext": [
+                                "DC=server,DC=local"
+                            ],
+                            "schemaNamingContext": [
+                                "CN=Schema,CN=Configuration,DC=server,DC=local"
+                            ],
+                            "serverName": [
+                                "CN=Servers,CN=Sites,CN=Configuration,DC=server,DC=local"
+                            ],
+                            "subschemaSubentry": [
+                                "CN=Aggregate,CN=Schema,CN=Configuration,DC=server,DC=local"
+                            ],
+                            "supportedCapabilities": [
+                                "1.2.840.113556.1.4.800",
+                                "1.2.840.113556.1.4.1670",
+                                "1.2.840.113556.1.4.1791",
+                                "1.2.840.113556.1.4.1935",
+                                "1.2.840.113556.1.4.2080",
+                                "1.2.840.113556.1.4.2237"
+                            ],
+                            "supportedControl": [
+                                "1.2.840.113556.1.4.319",
+                                "1.2.840.113556.1.4.801",
+                                "1.2.840.113556.1.4.473",
+                                "1.2.840.113556.1.4.528",
+                                "1.2.840.113556.1.4.417",
+                                "1.2.840.113556.1.4.619",
+                                "1.2.840.113556.1.4.841",
+                                "1.2.840.113556.1.4.529",
+                                "1.2.840.113556.1.4.805",
+                                "1.2.840.113556.1.4.521",
+                                "1.2.840.113556.1.4.970",
+                                "1.2.840.113556.1.4.1338",
+                                "1.2.840.113556.1.4.474",
+                                "1.2.840.113556.1.4.1339",
+                                "1.2.840.113556.1.4.1340",
+                                "1.2.840.113556.1.4.1413",
+                                "2.16.840.1.113730.3.4.9",
+                                "2.16.840.1.113730.3.4.10",
+                                "1.2.840.113556.1.4.1504",
+                                "1.2.840.113556.1.4.1852",
+                                "1.2.840.113556.1.4.802",
+                                "1.2.840.113556.1.4.1907",
+                                "1.2.840.113556.1.4.1948",
+                                "1.2.840.113556.1.4.1974",
+                                "1.2.840.113556.1.4.1341",
+                                "1.2.840.113556.1.4.2026",
+                                "1.2.840.113556.1.4.2064",
+                                "1.2.840.113556.1.4.2065",
+                                "1.2.840.113556.1.4.2066",
+                                "1.2.840.113556.1.4.2090",
+                                "1.2.840.113556.1.4.2205",
+                                "1.2.840.113556.1.4.2204",
+                                "1.2.840.113556.1.4.2206",
+                                "1.2.840.113556.1.4.2211",
+                                "1.2.840.113556.1.4.2239",
+                                "1.2.840.113556.1.4.2255",
+                                "1.2.840.113556.1.4.2256",
+                                "1.2.840.113556.1.4.2309"
+                            ],
+                            "supportedLDAPPolicies": [
+                                "MaxPoolThreads",
+                                "MaxPercentDirSyncRequests",
+                                "MaxDatagramRecv",
+                                "MaxReceiveBuffer",
+                                "InitRecvTimeout",
+                                "MaxConnections",
+                                "MaxConnIdleTime",
+                                "MaxPageSize",
+                                "MaxBatchReturnMessages",
+                                "MaxQueryDuration",
+                                "MaxDirSyncDuration",
+                                "MaxTempTableSize",
+                                "MaxResultSetSize",
+                                "MinResultSets",
+                                "MaxResultSetsPerConn",
+                                "MaxNotificationPerConn",
+                                "MaxValRange",
+                                "MaxValRangeTransitive",
+                                "ThreadMemoryLimit",
+                                "SystemMemoryLimitPercent"
+                            ],
+                            "supportedLDAPVersion": [
+                                "3",
+                                "2"
+                            ],
+                            "supportedSASLMechanisms": [
+                                "GSSAPI",
+                                "GSS-SPNEGO",
+                                "EXTERNAL",
+                                "DIGEST-MD5"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "handler": "memcache",
+                    "port": 11211,
+                    "params": {
+                        "server_version": "1.5.16"
+                    }
+                },
+                {
+                    "handler": "modbus",
+                    "port": 502,
+                    "params": {
+                        "server_info": [
+                            "Schneider Electric",
+                            "ATV630D22N4",
+                            "0204",
+                            "Device Info test"
+                        ]
+                    }
+                },
+                {
+                    "handler": "mqtt",
+                    "port": 1883,
+                    "params": {
+                        "accounts": null,
+                        "ssl": false
+                    }
+                },
+                {
+                    "handler": "mssql",
+                    "port": 1433,
+                    "params": {
+                        "accounts": [
+                            "sa:123456"
+                        ],
+                        "server_name": "mssql"
+                    }
+                },
+                {
+                    "handler": "mysql",
+                    "port": 3306,
+                    "params": {
+                        "accounts": [
+                            "root:123456"
+                        ],
+                        "db_name": "shop",
+                        "server_version": "5.7.9",
+                        "system_variables": [
+                            "datadir:/usr/local/var/mysql/"
+                        ],
+                        "table_name": "users"
+                    }
+                },
+                {
+                    "handler": "netbios",
+                    "port": 137,
+                    "params": {
+                        "group_name": "WORKGROUP",
+                        "host_name": "Admin",
+                        "mac": "00:01:02:03:04:05",
+                        "server_name": "Admin"
+                    }
+                },
+                {
+                    "handler": "nfs",
+                    "port": 2049,
+                    "params": {
+                        "fs_path": "./nfs_data"
+                    }
+                },
+                {
+                    "handler": "ntp",
+                    "port": 123
+                },
+                {
+                    "handler": "onvif",
+                    "port": 3702,
+                    "params": {
+                        "config_file": "_onvif.json"
+                    }
+                },
+                {
+                    "handler": "pop3",
+                    "port": 110,
+                    "params": {
+                        "accounts": [
+                            "admin:123456",
+                            "guest:guest"
+                        ],
+                        "server_version": "Dovecot",
+                        "ssl": false
+                    }
+                },
+                {
+                    "handler": "portmap",
+                    "port": 111,
+                    "params": {
+                        "mapping_table": [
+                            "100000,4,tcp,111",
+                            "100000,3,tcp,111",
+                            "100000,2,tcp,111",
+                            "100000,4,udp,111",
+                            "100000,3,udp,111",
+                            "100000,2,udp,111"
+                        ]
+                    }
+                },
+                {
+                    "handler": "postgres",
+                    "port": 5432,
+                    "params": {
+                        "accounts": [
+                            "postgres:123456"
+                        ],
+                        "auth": "plain",
+                        "server_version": "14.0"
+                    }
+                },
+                {
+                    "handler": "rdp",
+                    "port": 3389,
+                    "params": {
+                        "accounts": [
+                            "administrator:123456"
+                        ],
+                        "auth": false,
+                        "domain_name": "DESKTOP-Q1Test",
+                        "image": "rdp.jpg",
+                        "sec_layer": "auto"
+                    }
+                },
+                {
+                    "handler": "redis",
+                    "port": 6379,
+                    "params": {
+                        "server_version": "3.2.3"
+                    }
+                },
+                {
+                    "handler": "rtsp",
+                    "port": 554,
+                    "params": {
+                        "headers": [],
+                        "server": ""
+                    }
+                },
+                {
+                    "handler": "s7",
+                    "port": 102
+                },
+                {
+                    "handler": "sip",
+                    "port": 5060,
+                    "params": {
+                        "body": "",
+                        "headers": []
+                    }
+                },
+                {
+                    "handler": "smb",
+                    "port": 445,
+                    "params": {
+                        "accounts": [
+                            "administrator:123456"
+                        ],
+                        "domain_name": "NASE83ACA",
+                        "server_name": "NASE83ACA",
+                        "shares": [
+                            "admin:Home directory",
+                            "public:Public directory"
+                        ]
+                    }
+                },
+                {
+                    "handler": "smtp",
+                    "port": 25,
+                    "params": {
+                        "accounts": [
+                            "admin:123456"
+                        ],
+                        "appname": "ESMTP",
+                        "auth": false,
+                        "banner": "Postfix (Ubuntu)",
+                        "hostname": "smtp.fapro.com",
+                        "ssl": false,
+                        "timeout": 3
+                    }
+                },
+                {
+                    "handler": "snmp",
+                    "port": 161,
+                    "params": {
+                        "accounts": [
+                            "admin:123456"
+                        ],
+                        "engineId": "snmp_Server",
+                        "enterpriseId": 20408,
+                        "sys_desc": "RouterOS x86"
+                    }
+                },
+                {
+                    "handler": "socks5",
+                    "port": 1080,
+                    "params": {
+                        "accounts": [
+                            "guest:123456"
+                        ],
+                        "auth": true,
+                        "resp_message": "200 OK"
+                    }
+                },
+                {
+                    "handler": "ssdp",
+                    "port": 1900,
+                    "params": {
+                        "dev_location": "http://192.168.0.1:54383/rootDesc.xml",
+                        "dev_type": "upnp:rootdevice",
+                        "dev_usn": "uuid:00000000-0000-0000-0000-000000000000::upnp:rootdevice",
+                        "headers": [],
+                        "max_age": 1800,
+                        "server_version": "OS 1.0 UPnP/1.0 Realtek/V1.3"
+                    }
+                },
+                {
+                    "handler": "ssh",
+                    "port": 22,
+                    "params": {
+                        "accounts": [
+                            "root:123456:/root:0"
+                        ],
+                        "prompt": "$ ",
+                        "server_version": "SSH-2.0-OpenSSH_7.4"
+                    }
+                },
+                {
+                    "handler": "tcp_echo",
+                    "port": 1234
+                },
+                {
+                    "handler": "tcp_forward",
+                    "port": 8079,
+                    "params": {
+                        "target": "www.bing.com:80"
+                    }
+                },
+                {
+                    "handler": "telnet",
+                    "port": 23,
+                    "params": {
+                        "password": "123456",
+                        "prompt": "$ ",
+                        "ssl": false
+                    }
+                },
+                {
+                    "handler": "tns",
+                    "port": 1521,
+                    "params": {
+                        "VSNNUM": "186647040",
+                        "accounts": [
+                            "system:oracle"
+                        ],
+                        "banner": "x86_64/Linux 2.4.xx",
+                        "newmode": false,
+                        "sids": [
+                            "ORCL",
+                            "XE",
+                            "oracle"
+                        ],
+                        "version": "Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production"
+                    }
+                },
+                {
+                    "handler": "udp_echo",
+                    "port": 1234
+                },
+                {
+                    "handler": "vnc",
+                    "port": 5900,
+                    "params": {
+                        "challenge": "0123456789abcdef",
+                        "password": "123456"
+                    }
+                },
+                {
+                    "handler": "weblogic",
+                    "port": 7001,
+                    "params": {
+                        "headers": [
+                            "MS:10000000"
+                        ],
+                        "server_version": "12.2.1.4.0"
+                    }
+                },
+                {
+                    "handler": "wemo",
+                    "port": 49152,
+                    "params": {
+                        "server_version": "OS 1.0 UPnP/1.0 Realtek/V1.0"
+                    }
+                }
+            ]
+        }
+    ],
+    "templates": null
+}
