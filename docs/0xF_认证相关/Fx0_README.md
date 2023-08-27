@@ -4,3 +4,4 @@
 
 -   阿里云云安全专业认证考试（Alibaba Cloud Certified Professional，ACP）
 -   信息系统安全专业认证（Certification for Information System Security Professional，CISSP）
+-   进攻性安全认证专家考试（Offensive Security Certified Professional, OSCP）
